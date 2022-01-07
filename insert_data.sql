@@ -15,5 +15,4 @@ CREATE TABLE staff
 
 INSERT INTO staff VALUES ('Jaci', 'Kingsley', 1991-08-19, 012345678, 'jaci@hospital.com', 40, 'Portsmouth Road', 'Hampshire', 'Po1 1ab'),
         ('Anneka', 'Brittain', 1986-12-25, 23456789, 'anneka@hospital.com', 38, 'Stanhope Road', 'Hampshire', 'Po1, 0bc'),
-        (),
-
+        ();
