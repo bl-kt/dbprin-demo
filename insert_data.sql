@@ -26,11 +26,24 @@ INSERT INTO complaint VALUES
 
 INSERT INTO general_practitioner VALUES
     ('Somers Town Health Centre', 'Somerstown Central Community Hub, Tyseley Road', 'Southsea', 'Hampshire', 'PO5 4EZ'),
+    ('The Village Surgery', 'The Square', 'South Redbank', 'Hampshire', 'GU5 7EA')
 
 INSERT INTO patient VALUES
     ('Tawanda', 'Muyeye', '1948-03-05', 07968152882, 't.muyeye@gmail.com', '50 Hamphire Drive', 'Maidstone', 'Hampshire','ME15 7ES', 0, 1),
     ('Adrian', 'Burl', '1955-07-02', 07618156822, 'a.burl99@gmail.com', 'North Baddesley', 'Chandlers Ford', 'Hampshire', 'SO52 9JU', 0, 0),
     ('Tadiwanashe', 'Ditima', '1968-12-12', 07115156832, 't.ditima@gmail.com', '50', 'Shakespeare Road', 'Portsmouth', 'PO1 5LF', 0, 2);
+
+CREATE TABLE ward_speciality
+(
+    speciality_id      SERIAL PRIMARY KEY,
+    speciality_name     VARCHAR(30) NOT NULL,
+    speciality_comments TEXT
+);
+
+INSERT INTO ward_speciality VALUES
+    ('A & E', 'Accident and Emergency'),
+    ('General', 'For general/basic medical concerns'),
+    ('Pediatrics', 'Specialist childrens ward')
 
 CREATE TABLE ward
 (
@@ -40,14 +53,11 @@ CREATE TABLE ward
     ward_comments   VARCHAR(100)
 );
 
+-- 'ward specialty' will be the foreign key from ward_specialty
 INSERT INTO ward VALUES
-    ('A & E', 'Accident and emergency', 'Operates 24/7'),
-    ('General Surgery', 1, 'For general/basic medical concerns'),
-
-
--- not sure what to do here
-INSERT INTO ward_speciality VALUES
-    ()
+    ('A & E', ?, 'Operates 24/7'),
+    ('General Surgery', 1?, 'For general/basic medical concerns'),
+    ('Pediatrics', ?)
 
 INSERT INTO patient_complaint VALUES
     -- not sure what to put here
