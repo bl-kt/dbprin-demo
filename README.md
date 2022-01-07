@@ -1,4 +1,4 @@
-"# dbprin-demo" 
+#
 
 * Char - Primary key number 1 - 5
 * Bart - primary key number 6 - 10
