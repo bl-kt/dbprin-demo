@@ -1,3 +1,4 @@
+-- create statement just for reference
 CREATE TABLE staff
 (
     staff_id      SERIAL PRIMARY KEY,
