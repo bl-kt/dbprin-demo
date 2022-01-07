@@ -17,3 +17,7 @@ INSERT INTO staff VALUES ('Jaci', 'Kingsley', 1991-08-19, 012345678, 'jaci@hospi
         ('Anneka', 'Brittain', 1986-12-25, 23456789, 'anneka@hospital.com', 38, 'Stanhope Road', 'Hampshire', 'Po1, 0bc'),
         (),
 
+
+INSERT INTO ward(
+    
+)
