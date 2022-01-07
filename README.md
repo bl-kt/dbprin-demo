@@ -7,6 +7,15 @@
 * Gurvir - primary key number 21 - 25
 
 10 wards
+
+A and E
+General surgery
+COVID ward
+Paediatrics
+ICU
+maternity
+orthopedic
+
 ID = 1... 10
 
 Patient should relate back to your own gp that you have made.
