@@ -20,7 +20,14 @@ INSERT INTO staff VALUES
     ("Adrienne", "Webster", 1988-03-18, 14340000, "a.auctor@aol.com", "586", "Gravida Street", "Surrey","GU1 1AB"),
     ("Jasmine", "Bryant", 1980-08-07, 7763576353, "arcu.vivamus.sit@protonmail.edu","60", "Aliquam St",  "Sussex","W12 QAB"),
 
+CREATE TABLE ward
+(
+    ward_id         SERIAL PRIMARY KEY,
+    ward_name       VARCHAR(30)                                    NOT NULL,
+    ward_speciality INT REFERENCES ward_speciality (speciality_id) NOT NULL,
+    ward_comments   VARCHAR(100)
+);
 
 INSERT INTO ward(
-    
-)
+    (1, 'A & E', 'Accident and emergency', 'Operates 24/7')
+);
