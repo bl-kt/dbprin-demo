@@ -25,4 +25,11 @@ INSERT INTO staff VALUES
     ("Adrienne", "Webster", 1988-03-18, 14340000, "a.auctor@aol.com", "586", "Gravida Street", "Surrey","GU1 1AB"),
     ("Jasmine", "Bryant", 1980-08-07, 7763576353, "arcu.vivamus.sit@protonmail.edu","60", "Aliquam St",  "Sussex","W12 QAB"),
 
+<<<<<<< HEAD
 >>>>>>> 910c4d41f71a059238c1f825c17b7ff73a9db93d
+=======
+
+INSERT INTO ward(
+    
+)
+>>>>>>> 87857036710c91371990508efa7bb422f57d07f9
