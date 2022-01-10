@@ -52,7 +52,10 @@ INSERT INTO doctor_treatment VALUES
     ((2,0), 'Patient needs to take medication for 7 days'),
     -- char
     ((6,3), 'Patient vitals to be carefully observed whilst antibiotics administered'),
-    ((8,4), 'Plaster cast fitted, discharge with callback in 6 mths.');
+    ((8,4), 'Plaster cast fitted, discharge with callback in 6 mths.'),
+    ((0,5), 'Cauterised wound, discharged with icepack'),
+    ((2,6), 'Referal to external diagnostic services - tourettes'),
+    ((0,7), 'Admit to covid ward for further treatment')
 
 -- TREATMENT
 INSERT INTO treatment VALUES
@@ -63,6 +66,9 @@ INSERT INTO treatment VALUES
     -- char
     ('2022-01-05', '2022-01-12', 'Antibiotics', 3),
     ('2022-01-01', '2022-01-03', 'Plaster Cast', 4),
+    ('2021-03-07', '2021-03-07', 'Cauterise', 5),
+    ('2021-04-06', '2021-04-06', 'External referal', 6),
+    ('2021-10-18', '2021-11-02', 'Admittance to covid ward', 7);
 
 -- COMPLAINT
 INSERT INTO complaint VALUES
@@ -72,7 +78,10 @@ INSERT INTO complaint VALUES
     ('2021-05-26', 'Couldnt breathe, unable to stay awake, non responsive.'),
     --char
     ('2022-01-04', 'Difficult birth - high chance of infection'),
-    ('2021-12-31', 'Broken tibia');
+    ('2021-12-31', 'Broken tibia'),
+    ('2021-03-07', 'Unstoppable nosebleed'),
+    ('2021-01-29', 'Tics, uncontrollable movements and sounds'),
+    ('2021-10-18', 'Covid 19 Symptoms unable to treat at home');
 
 
 -- PATIENT-COMPLAINT
@@ -83,6 +92,9 @@ INSERT INTO patient_complaint VALUES
     ((4, 2), 'In treatment'),
     ((6, 3), 'In treatment'),
     ((5, 4), 'Discharged'),
+    ((7, 5), 'Discharged'),
+    ((8, 6), 'Referred externally'),
+    ((9, 7), 'Discharged');
 
 -- PATIENT
 INSERT INTO patient VALUES
@@ -114,14 +126,14 @@ INSERT INTO patient VALUES
      "Nullam enim. Sed nulla ante, iaculis nec,"),
     ("Callum","Francis",'2001-12-22', '05548858371',"vulputate.dui.nec@icloud.co.uk",
      "45","Vel St.","Derbyshire","RF6 1AY",
-     0,x,),
+     0,4,),
     ("Abel","Garrison",'1972-02-22', '01487027927',"elementum@icloud.com",
      "82","Magnis St.","Norfolk","W49 5PU",
-     4,x,
+     4,8,
      "a felis ullamcorper viverra. Maecenas iaculis aliquet"),
     ("Bertha","Bartlett",'1993-10-22', '05687602427',"parturient@outlook.edu",
      "56","Fermentum Ave","Merionethshire","U5V 6YP",
-     3,x,
+     3,10,
      "Duis ac arcu. Nunc mauris. Morbi non sapien");
 
 -- GP
