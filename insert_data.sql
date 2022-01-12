@@ -74,13 +74,11 @@ VALUES
     (10, FALSE, 34);
 
 -- STAFF DOCTORS
--- Staff Doctor works
+-- Staff Doctor 
+-- this works
 INSERT INTO staff_doctor (doctor_id) VALUES
--- staff id
-    (1),
     (2),
     (3),
-    -- char
     (6),
     (8);
 
