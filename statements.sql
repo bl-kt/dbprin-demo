@@ -15,8 +15,18 @@
 
 SELECT patient_id, patient_fname, patient_lname, patient_dob, gp_name, gp_add1, gp_add2, 
 treatment_desc, treatment_start, treatment_end from patient
-WHERE patient.patient_gp = patient.gp_id,
+JOIN general_practitioner ON patient.patient_gp = patient.gp_id
+JOIN ward ON ward.ward_specialty = ward_speciality.specialty_id
+JOIN staff.staff_doctor on staff_id = staff.staff_doctor(staff_id)
+JOIN staff_nurse on staff.staff_id = staff_nurse(nurse_id)
+JOIN treatment on complaint_complaintid = treatment_id;
+
 -- dont know what to do next lol
 
 
 -- need to do a joint on gp name and patient.
+
+
+-- which patient has left as a sql query
+
+-- USE STUFF THAT HE THOUGHT THIS YEAR LIKE ILIKE, GROUPBY, ETC
