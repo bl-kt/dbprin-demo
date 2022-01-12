@@ -26,7 +26,7 @@ VALUES
      '19','Quisque Av','Morayshire','FR3 2LC');
 
 -- STAFF NURSES
-INSERT INTO staff_nurse VALUES
+INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward) VALUES
 -- staff id, is head nurse (bool), ward
     (1, TRUE, 0),
     (4, FALSE, 1),
@@ -36,7 +36,7 @@ INSERT INTO staff_nurse VALUES
     (9, TRUE, 2);
 
 -- STAFF DOCTORS
-INSERT INTO staff_doctor VALUES
+INSERT INTO staff_doctor (doctor_id) VALUES
 -- staff id
     (0),
     (2),
