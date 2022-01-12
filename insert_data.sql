@@ -26,14 +26,22 @@ VALUES
      '19','Quisque Av','Morayshire','FR3 2LC');
 
 -- STAFF NURSES
-INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward) VALUES
 -- staff id, is head nurse (bool), ward
-    (1, TRUE, 0),
-    (4, FALSE, 1),
-    -- char
+
+CREATE TABLE staff_nurse
+(
+    nurse_id     INT REFERENCES staff (staff_id) NOT NULL,
+    is_head_nurse BOOLEAN                        NOT NULL,
+    nurse_ward   INT REFERENCES ward (ward_id)   NOT NULL
+);
+INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward)
+VALUES
+    (1, TRUE, 3),
+    (4, FALSE, 4),
     (5, FALSE, 0),
     (7, TRUE, 1),
     (9, TRUE, 2);
+    (10, FALSE, 5);
 
 -- STAFF DOCTORS
 INSERT INTO staff_doctor (doctor_id) VALUES
