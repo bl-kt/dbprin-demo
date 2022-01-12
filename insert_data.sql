@@ -115,7 +115,7 @@ INSERT INTO patient VALUES
       2, 3, 'Patient must be supervised 24/7'),
     ('Anthony', 'Pearson', '1970-05-20', '0716286851', 'A.Pearson@yahoo.co.uk',
      "33", 'Droorey Lane', 'Petersfield', 'UP2 4UJ',
-      1, 2);
+      1, 2),
     -- CHAR 5-9
     ("Alexander","Ratliff",'1967-10-22', '08008719187',"enim@icloud.edu",
      "78","Faucibus St.","Bedfordshire","GL8 4DD",
@@ -126,7 +126,7 @@ INSERT INTO patient VALUES
      "Nullam enim. Sed nulla ante, iaculis nec,"),
     ("Callum","Francis",'2001-12-22', '05548858371',"vulputate.dui.nec@icloud.co.uk",
      "45","Vel St.","Derbyshire","RF6 1AY",
-     0,4,),
+     0,4),
     ("Abel","Garrison",'1972-02-22', '01487027927',"elementum@icloud.com",
      "82","Magnis St.","Norfolk","W49 5PU",
      4,8,
@@ -166,7 +166,7 @@ INSERT INTO ward VALUES
     ('C1', 3, 'ICU for Coronavirus patients that have tested positive and require special assistance'),
     ('C2', 3, 'COVID General'),
     ('E9', 4, 'Maternity Ward'),
-    ('E11', 4, 'Emergency Maternity Ward/Overflow')
+    ('E11', 4, 'Emergency Maternity Ward/Overflow'),
     ('A2', 5,'Muscle and bone specialty ward', 'Ward that caters for muscle and bone related injuries.');
 -- 14 wards 0-13
 
