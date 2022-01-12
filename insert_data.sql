@@ -146,18 +146,18 @@ INSERT INTO patient (patient_id, patient_fname, patient_lname, patient_dob, pati
      'Duis ac arcu. Nunc mauris. Morbi non sapien');
 
 -- GP
-INSERT INTO general_practitioner (gp_id, gp_name, gp_add1, gp_add2, gp_county, gp_postcode) VALUES
---  id (serial), gp name, add1/house no, street, county, postcode
+-- Table working
+INSERT INTO general_practitioner (gp_name, gp_add1, gp_add2, gp_county, gp_postcode) VALUES
     ('Somers Town Health Centre',
-     'Somerstown Central Community Hub, Tyseley Road', 'Southsea', 'Hampshire', 'PO5 4EZ'),
+     'Somerstown Central, Tyseley Road', 'Southsea', 'Hampshire', 'PO5 4EZ'),
     ('The Village Surgery',
      'The Square', 'South Redbank', 'Hampshire', 'GU5 7EA'),
     ('Dickens Gardens Medical Centre',
-     'High Avenue', 'Middlesborough Road', 'Fratton', 'Pixon', 'PI9 5YJ'),
+     'High Avenue', 'Middlesborough Road', 'Pixon', 'PI9 5YJ'),
     ('East Route General Practice',
-     '34', 'Yeet Str', 'Yarnsborough', 'Smidley', 'SM1 H33'),
+     '34', 'Yeet Str, Yarnsborough', 'Smidley', 'SM1 H33'),
     ('Vernsborne Surgery',
-     '65', 'Ipsum Av', 'Narnsmouth', 'Hammingdom', 'HA4 L37');
+     '65', 'Narnsmouth', 'Hammingdom', 'HA4 L37');
 
 -- WARD
 -- Named all these after QA (local hospital) wards: https://www.porthosp.nhs.uk/wards/?rows=0
