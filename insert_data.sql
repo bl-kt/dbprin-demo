@@ -1,3 +1,5 @@
+-- FOLLOW THE INSERT STATEMENTS IN THIS ORDER DUE TO FOREIGN KEYS!
+
 -- STAFF
 -- id (serial, so no need to put), fname, lname, dob, phone, email, house no/add1, street, county, postcode
     -- id's 0-4
@@ -25,9 +27,42 @@ VALUES
     ('Cade','Lloyd','1982-05-01', '01916375276','ornare.fusce.mollis@yahoo.ca',
      '19','Quisque Av','Morayshire','FR3 2LC');
 
+-- WARD SPECIALITY
+-- speciality id (serial), name, comments
+-- THIS WORKS
+INSERT INTO ward_speciality (speciality_name, speciality_comments) VALUES
+    ('A & E', 'Accident and Emergency'), 
+    ('General', 'For general/basic medical concerns'), 
+    ('Pediatrics', 'Specialist childrens ward'), 
+    ('COVID ward', 'Specialist Coronavirus / Covid-19 Ward'),
+    ('Maternity', 'Maternity ward'),
+    ('Orthopedic', 'Bones and Muscle specialist');
+
+-- 'ward specialty' will be the foreign key from ward_specialty
+
+-- WARD
+-- Named all these after QA (local hospital) wards: https://www.porthosp.nhs.uk/wards/?rows=0
+-- ward id (serial), ward name, speciality (fk), comments
+-- THIS WORKS
+INSERT INTO ward (ward_name, ward_speciality, ward_comments) VALUES
+    ('A8', 2 , 'Operates 24/7'), -- has head nurse
+    ('A6', 2 , 'A&E Overflow'), -- has head nurse
+    ('B4', 5 , 'Orthopedic outpatient'), -- has head nurse
+    ('B7', 5 , 'Orthopedic surgery'),
+    ('D4', 1 ,'For general/basic medical concerns'),
+    ('D1', 1, 'Blood Tests'),
+    ('D2', 1, 'LFT/PCR Covid Tests'),
+    ('Starfish', 2, 'Childrens surgery'), --these are adorable?
+    ('Shipwreck', 2, 'Childrens outpatients'),
+    ('C1', 3, 'ICU for Coronavirus patients that have tested positive and require special assistance'),
+    ('C2', 3, 'COVID General'),
+    ('E9', 4, 'Maternity Ward'),
+    ('E11', 4, 'Emergency Maternity Ward/Overflow'),
+    ('A2', 5,'Muscle and bone specialty ward');
+-- 14 wards 0-13
+
 -- STAFF NURSES
 -- staff id, is head nurse (bool), ward
-
 CREATE TABLE staff_nurse
 (
     nurse_id     INT REFERENCES staff (staff_id) NOT NULL,
@@ -159,36 +194,16 @@ INSERT INTO general_practitioner (gp_name, gp_add1, gp_add2, gp_county, gp_postc
     ('Vernsborne Surgery',
      '65', 'Narnsmouth', 'Hammingdom', 'HA4 L37');
 
--- WARD
--- Named all these after QA (local hospital) wards: https://www.porthosp.nhs.uk/wards/?rows=0
-INSERT INTO ward (ward_id, ward_name, ward_speciality, ward_comments) VALUES
--- ward id (serial), ward name, speciality (fk), comments
-    ('A8', 0 , 'Operates 24/7'), -- has head nurse
-    ('A6', 0 , 'A&E Overflow'), -- has head nurse
-    ('B4', 5 , 'Orthopedic outpatient'), -- has head nurse
-    ('B7', 5 , 'Orthopedic surgery'),
-    ('D4', 1 ,'For general/basic medical concerns'),
-    ('D1', 1, 'Blood Tests'),
-    ('D2', 1, 'LFT/PCR Covid Tests'),
-    ('Starfish', 2, 'Childrens surgery'), --these are adorable?
-    ('Shipwreck', 2, 'Childrens outpatients'),
-    ('C1', 3, 'ICU for Coronavirus patients that have tested positive and require special assistance'),
-    ('C2', 3, 'COVID General'),
-    ('E9', 4, 'Maternity Ward'),
-    ('E11', 4, 'Emergency Maternity Ward/Overflow'),
-    ('A2', 5,'Muscle and bone specialty ward', 'Ward that caters for muscle and bone related injuries.');
--- 14 wards 0-13
 
--- WARD SPECIALITY
-INSERT INTO ward_speciality (speciality_id, speciality_name, speciality_comments) VALUES
--- speciality id (serial), name, comments
-    ('A & E', 'Accident and Emergency'), 
-    ('General', 'For general/basic medical concerns'), 
-    ('Pediatrics', 'Specialist childrens ward'), 
-    ('COVID ward', 'Specialist Coronavirus / Covid-19 Ward'),
-    ('Maternity', 'Maternity ward'),
-    ('Orthopedic', 'Bones and Muscle specialist');
+CREATE TABLE ward
+(
+    ward_id         SERIAL PRIMARY KEY,
+    ward_name       VARCHAR(30)                                    NOT NULL,
+    ward_speciality INT REFERENCES ward_speciality (speciality_id) NOT NULL,
+    ward_comments   VARCHAR(100)
+);
 
--- 'ward specialty' will be the foreign key from ward_specialty
+
+
 
 
