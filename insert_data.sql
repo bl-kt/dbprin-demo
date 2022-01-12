@@ -97,11 +97,8 @@ INSERT INTO patient_complaint VALUES
     ((9, 7), 'Discharged');
 
 -- PATIENT
-INSERT INTO patient VALUES
--- id (serial), fname, lname, dob, phone, email,
--- house no, street, county, postcode,
---  gp id (fk), ward id (fk), comments
-    ('Nowell', 'Bolton', '1989-04-05', '07001112222', 'nowell@bolton.com', 
+INSERT INTO patient (patient_id, patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+    ('Nowell', 'Bolton', '1989-04-05', '07001112222', 'nowell@bolton.com',
     '50', 'Tree Close', 'Hampshire', 'PO1 1QW',
     2, 11),
     ('Tawanda', 'Muyeye', '1948-03-05', '07968152882', 't.muyeye@gmail.com',
