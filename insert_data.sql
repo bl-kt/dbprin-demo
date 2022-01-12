@@ -94,7 +94,9 @@ INSERT INTO patient_complaint VALUES
     ((5, 4), 'Discharged'),
     ((7, 5), 'Discharged'),
     ((8, 6), 'Referred externally'),
-    ((9, 7), 'Discharged');
+    ((9, 7), 'Discharged'),
+    ((2, 8), 'preparing treatment'),
+    ((3, 9), 'Discharged');
 
 -- PATIENT
 INSERT INTO patient VALUES
