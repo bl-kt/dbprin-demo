@@ -106,6 +106,20 @@ INSERT INTO treatment (treatment_start, treatment_end, treatment_desc, complaint
     ('2021-04-06', '2021-04-06', 'External referal', 7),
     ('2021-10-18', '2021-11-02', 'Admittance to covid ward', 8);
 
+-- GP
+-- Table working
+INSERT INTO general_practitioner (gp_name, gp_add1, gp_add2, gp_county, gp_postcode) VALUES
+    ('Somers Town Health Centre',
+     'Somerstown Central, Tyseley Road', 'Southsea', 'Hampshire', 'PO5 4EZ'),
+    ('The Village Surgery',
+     'The Square', 'South Redbank', 'Hampshire', 'GU5 7EA'),
+    ('Dickens Gardens Medical Centre',
+     'High Avenue', 'Middlesborough Road', 'Pixon', 'PI9 5YJ'),
+    ('East Route General Practice',
+     '34', 'Yeet Str, Yarnsborough', 'Smidley', 'SM1 H33'),
+    ('Vernsborne Surgery',
+     '65', 'Narnsmouth', 'Hammingdom', 'HA4 L37');
+
 -- DOCTOR-TREATMENT
 INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
 --  combo key (of doctor id, then treatment id), comments
@@ -177,19 +191,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
      3,10,
      'Duis ac arcu. Nunc mauris. Morbi non sapien');
 
--- GP
--- Table working
-INSERT INTO general_practitioner (gp_name, gp_add1, gp_add2, gp_county, gp_postcode) VALUES
-    ('Somers Town Health Centre',
-     'Somerstown Central, Tyseley Road', 'Southsea', 'Hampshire', 'PO5 4EZ'),
-    ('The Village Surgery',
-     'The Square', 'South Redbank', 'Hampshire', 'GU5 7EA'),
-    ('Dickens Gardens Medical Centre',
-     'High Avenue', 'Middlesborough Road', 'Pixon', 'PI9 5YJ'),
-    ('East Route General Practice',
-     '34', 'Yeet Str, Yarnsborough', 'Smidley', 'SM1 H33'),
-    ('Vernsborne Surgery',
-     '65', 'Narnsmouth', 'Hammingdom', 'HA4 L37');
+
 
 
 CREATE TABLE ward
