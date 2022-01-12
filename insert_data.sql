@@ -1,9 +1,9 @@
 -- STAFF
-
-INSERT INTO staff VALUES
-
 -- id (serial, so no need to put), fname, lname, dob, phone, email, house no/add1, street, county, postcode
     -- id's 0-4
+--THIS WORKS!!!
+INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email, staff_add1, staff_add2, staff_county, staff_postcode)
+VALUES
     ('Jaci', 'Kingsley', '1991-08-19', '012345678', 'jaci@hospital.com',
      '40', 'Portsmouth Road', 'Hampshire', 'Po1 1ab'),
     ('Anneka', 'Brittain', '1986-12-25', '23456789', 'anneka@hospital.com',
@@ -14,7 +14,6 @@ INSERT INTO staff VALUES
      'Gravida Street', 'Surrey','GU1 1AB'),
     ('Jasmine', 'Bryant', '1980-08-07', '7763576353', 'arcu.vivamus.sit@protonmail.edu',
      '60', 'Aliquam St',  'Sussex','W12 QAB'),
-    -- Char, id's 5-9
     ('Aretha','Howe','1999-08-22', '0169775636','auctor.velit.aliquam@protonmail.net',
      '81','Sed Rd','Monmouthshire','C73 8SN'),
     ('Jelani','Saunders','2002-10-15', '01111641563','erat.in.consectetuer@hotmail.net',
