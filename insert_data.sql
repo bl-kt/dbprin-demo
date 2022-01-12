@@ -63,20 +63,15 @@ INSERT INTO ward (ward_name, ward_speciality, ward_comments) VALUES
 
 -- STAFF NURSES
 -- staff id, is head nurse (bool), ward
-CREATE TABLE staff_nurse
-(
-    nurse_id     INT REFERENCES staff (staff_id) NOT NULL,
-    is_head_nurse BOOLEAN                        NOT NULL,
-    nurse_ward   INT REFERENCES ward (ward_id)   NOT NULL
-);
+-- THIS WORKS
 INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward)
 VALUES
-    (1, TRUE, 3),
-    (4, FALSE, 4),
-    (5, FALSE, 0),
-    (7, TRUE, 1),
-    (9, TRUE, 2);
-    (10, FALSE, 5);
+    (1, TRUE, 29),
+    (4, FALSE, 30),
+    (5, FALSE, 31),
+    (7, TRUE, 32),
+    (9, TRUE, 33),
+    (10, FALSE, 34);
 
 -- STAFF DOCTORS
 -- Staff Doctor works
