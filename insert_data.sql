@@ -33,7 +33,7 @@ INSERT INTO staff_nurse VALUES
     (4, FALSE, 1),
     -- char
     (5, FALSE, 0),
-    (7, TRUE, 1,
+    (7, TRUE, 1),
     (9, TRUE, 2);
 
 -- STAFF DOCTORS
@@ -148,7 +148,7 @@ INSERT INTO general_practitioner VALUES
     ('East Route General Practice',
      '34', 'Yeet Str', 'Yarnsborough', 'Smidley', 'SM1 H33'),
     ('Vernsborne Surgery',
-     '65', 'Ipsum Av', 'Narnsmouth', 'Hammingdom', 'HA4 L37'),
+     '65', 'Ipsum Av', 'Narnsmouth', 'Hammingdom', 'HA4 L37');
 
 -- WARD
 -- Named all these after QA (local hospital) wards: https://www.porthosp.nhs.uk/wards/?rows=0
