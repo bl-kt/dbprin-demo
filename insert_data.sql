@@ -164,19 +164,27 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
      'Duis ac arcu. Nunc mauris. Morbi non sapien');
 
 -- DOCTOR-TREATMENT
-INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
 --  combo key (of doctor id, then treatment id), comments
-    ((2,0), 'Patient needs to take medication for 7 days'),
-    -- char
+-- This works
+-- Not sure about this - it works but we have no primary key and no primary column. We may need to 
+-- alter the table and add a column for composite key?
+INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
+    (2, 1),
+    (6, 3),
+    (8, 4),
+    (3, 5),
+    (2, 6),
+    (3, 7);
+
+-- Original but we don't need the comments - we have no comments column in doctor_treatment.
+-- Don't insert this
+INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
+    ((2,1), 'Patient needs to take medication for 7 days'),
     ((6,3), 'Patient vitals to be carefully observed whilst antibiotics administered'),
     ((8,4), 'Plaster cast fitted, discharge with callback in 6 mths.'),
-    ((0,5), 'Cauterised wound, discharged with icepack'),
+    ((3,5), 'Cauterised wound, discharged with icepack'),
     ((2,6), 'Referal to external diagnostic services - tourettes'),
-    ((0,7), 'Admit to covid ward for further treatment');
-
-
-
-
+    ((3,7), 'Admit to covid ward for further treatment');
 
 
 -- PATIENT-COMPLAINT
