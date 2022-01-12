@@ -79,9 +79,10 @@ VALUES
     (10, FALSE, 5);
 
 -- STAFF DOCTORS
+-- Staff Doctor works
 INSERT INTO staff_doctor (doctor_id) VALUES
 -- staff id
-    (0),
+    (1),
     (2),
     (3),
     -- char
@@ -97,7 +98,7 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
     ((8,4), 'Plaster cast fitted, discharge with callback in 6 mths.'),
     ((0,5), 'Cauterised wound, discharged with icepack'),
     ((2,6), 'Referal to external diagnostic services - tourettes'),
-    ((0,7), 'Admit to covid ward for further treatment')
+    ((0,7), 'Admit to covid ward for further treatment');
 
 -- TREATMENT
 -- Treatment table works
@@ -129,8 +130,8 @@ INSERT INTO complaint (complaint_date, complaint_desc) VALUES
 -- PATIENT-COMPLAINT
 INSERT INTO patient_complaint (patient_id, complaint_id) VALUES
 -- combo key (of patient id, complaint id), and comments
-    ((0, 0), 'Discharged'),
-    ((1, 1), 'Treated'),
+    ((1, 1), 'Discharged'),
+    ((2, 2), 'Treated'),
     ((4, 2), 'In treatment'),
     ((6, 3), 'In treatment'),
     ((5, 4), 'Discharged'),
