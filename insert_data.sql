@@ -46,7 +46,7 @@ INSERT INTO staff_doctor VALUES
     (8);
 
 -- DOCTOR-TREATMENT
-INSERT INTO doctor_treatment VALUES
+INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
 --  combo key (of doctor id, then treatment id), comments
     ((2,0), 'Patient needs to take medication for 7 days'),
     -- char
@@ -57,7 +57,7 @@ INSERT INTO doctor_treatment VALUES
     ((0,7), 'Admit to covid ward for further treatment')
 
 -- TREATMENT
-INSERT INTO treatment VALUES
+INSERT INTO treatment (treatment_id, treatment_start, treatment_end, treatment_desc, complaint_no) VALUES
 -- serial id, start date, end date, description, complaint no (fk)
     ('2021-05-24', '2021-05-24', 'paracetemol and cough syrup', 0),
     ('2021-05-25', '2021-06-01', 'Amoxicillin', 1),
@@ -70,7 +70,7 @@ INSERT INTO treatment VALUES
     ('2021-10-18', '2021-11-02', 'Admittance to covid ward', 7);
 
 -- COMPLAINT
-INSERT INTO complaint VALUES
+INSERT INTO complaint (complaint_id, complaint_date, complaint_desc) VALUES
 -- complaint id (serial), complaint date, description
     ('2021-05-24', 'A dry cough and a flu'),
     ('2021-05-25', 'Chest infection'),
@@ -84,7 +84,7 @@ INSERT INTO complaint VALUES
 
 
 -- PATIENT-COMPLAINT
-INSERT INTO patient_complaint VALUES
+INSERT INTO patient_complaint (patient_id, complaint_id) VALUES
 -- combo key (of patient id, complaint id), and comments
     ((0, 0), 'Discharged'),
     ((1, 1), 'Treated'),
@@ -138,7 +138,7 @@ INSERT INTO patient (patient_id, patient_fname, patient_lname, patient_dob, pati
      'Duis ac arcu. Nunc mauris. Morbi non sapien');
 
 -- GP
-INSERT INTO general_practitioner VALUES
+INSERT INTO general_practitioner (gp_id, gp_name, gp_add1, gp_add2, gp_county, gp_postcode) VALUES
 --  id (serial), gp name, add1/house no, street, county, postcode
     ('Somers Town Health Centre',
      'Somerstown Central Community Hub, Tyseley Road', 'Southsea', 'Hampshire', 'PO5 4EZ'),
@@ -153,7 +153,7 @@ INSERT INTO general_practitioner VALUES
 
 -- WARD
 -- Named all these after QA (local hospital) wards: https://www.porthosp.nhs.uk/wards/?rows=0
-INSERT INTO ward VALUES
+INSERT INTO ward (ward_id, ward_name, ward_speciality, ward_comments) VALUES
 -- ward id (serial), ward name, speciality (fk), comments
     ('A8', 0 , 'Operates 24/7'), -- has head nurse
     ('A6', 0 , 'A&E Overflow'), -- has head nurse
@@ -172,7 +172,7 @@ INSERT INTO ward VALUES
 -- 14 wards 0-13
 
 -- WARD SPECIALITY
-INSERT INTO ward_speciality VALUES
+INSERT INTO ward_speciality (speciality_id, speciality_name, speciality_comments) VALUES
 -- speciality id (serial), name, comments
     ('A & E', 'Accident and Emergency'), 
     ('General', 'For general/basic medical concerns'), 
