@@ -176,6 +176,26 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
     (2, 6),
     (3, 7);
 
+-- PATIENT-COMPLAINT
+-- combo key (of patient id, complaint id), and comments
+-- This works but same as above, we have no official primary key
+INSERT INTO patient_complaint (patient_id, complaint_id, pat_com_comments) VALUES
+    (1, 1, 'Discharged'),
+    (2, 2, 'Treated'),
+    (4, 2, 'In treatment'),
+    (6, 3, 'In treatment'),
+    (5, 4, 'Discharged'),
+    (7, 5, 'Discharged'),
+    (8, 6, 'Referred externally'),
+    (9, 7, 'Discharged'),
+    (2, 8, 'preparing treatment'),
+    (3, 1, 'Discharged');
+
+
+
+
+
+--DONT INSERT THIS - kept in case we need comments
 -- Original but we don't need the comments - we have no comments column in doctor_treatment.
 -- Don't insert this
 INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
@@ -185,36 +205,4 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
     ((3,5), 'Cauterised wound, discharged with icepack'),
     ((2,6), 'Referal to external diagnostic services - tourettes'),
     ((3,7), 'Admit to covid ward for further treatment');
-
-
--- PATIENT-COMPLAINT
-INSERT INTO patient_complaint (patient_id, complaint_id) VALUES
--- combo key (of patient id, complaint id), and comments
-    ((1, 1), 'Discharged'),
-    ((2, 2), 'Treated'),
-    ((4, 2), 'In treatment'),
-    ((6, 3), 'In treatment'),
-    ((5, 4), 'Discharged'),
-    ((7, 5), 'Discharged'),
-    ((8, 6), 'Referred externally'),
-    ((9, 7), 'Discharged'),
-    ((2, 8), 'preparing treatment'),
-    ((3, 9), 'Discharged');
-
-
-
-
-
-
-CREATE TABLE ward
-(
-    ward_id         SERIAL PRIMARY KEY,
-    ward_name       VARCHAR(30)                                    NOT NULL,
-    ward_speciality INT REFERENCES ward_speciality (speciality_id) NOT NULL,
-    ward_comments   VARCHAR(100)
-);
-
-
-
-
 
