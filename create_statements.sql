@@ -1,5 +1,5 @@
 CREATE DATABASE hospital;
-/c hospital
+\c hospital
 
 CREATE TABLE staff
 (
