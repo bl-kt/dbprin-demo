@@ -100,25 +100,25 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
     ((0,7), 'Admit to covid ward for further treatment')
 
 -- TREATMENT
-INSERT INTO treatment (treatment_id, treatment_start, treatment_end, treatment_desc, complaint_no) VALUES
--- serial id, start date, end date, description, complaint no (fk)
-    ('2021-05-24', '2021-05-24', 'paracetemol and cough syrup', 0),
-    ('2021-05-25', '2021-06-01', 'Amoxicillin', 1),
-    ('2021-05-26', '2021-06-10', 'Ventilator', 2),
-    -- char
-    ('2022-01-05', '2022-01-12', 'Antibiotics', 3),
-    ('2022-01-01', '2022-01-03', 'Plaster Cast', 4),
-    ('2021-03-07', '2021-03-07', 'Cauterise', 5),
-    ('2021-04-06', '2021-04-06', 'External referal', 6),
-    ('2021-10-18', '2021-11-02', 'Admittance to covid ward', 7);
+-- Treatment table works
+INSERT INTO treatment (treatment_start, treatment_end, treatment_desc, complaint_no) VALUES
+    ('2021-05-24', '2021-05-24', 'paracetemol and cough syrup', 1),
+    ('2021-05-25', '2021-06-01', 'Amoxicillin', 2),
+    ('2021-05-26', '2021-06-10', 'Ventilator', 3),
+    -- Char
+    ('2022-01-05', '2022-01-12', 'Antibiotics', 4),
+    ('2022-01-01', '2022-01-03', 'Plaster Cast', 5),
+    ('2021-03-07', '2021-03-07', 'Cauterise', 6),
+    ('2021-04-06', '2021-04-06', 'External referal', 7),
+    ('2021-10-18', '2021-11-02', 'Admittance to covid ward', 8);
 
 -- COMPLAINT
-INSERT INTO complaint (complaint_id, complaint_date, complaint_desc) VALUES
--- complaint id (serial), complaint date, description
+-- Complaint table working
+INSERT INTO complaint (complaint_date, complaint_desc) VALUES
     ('2021-05-24', 'A dry cough and a flu'),
     ('2021-05-25', 'Chest infection'),
     ('2021-05-26', 'Couldnt breathe, unable to stay awake, non responsive.'),
-    --char
+    -- Char
     ('2022-01-04', 'Difficult birth - high chance of infection'),
     ('2021-12-31', 'Broken tibia'),
     ('2021-03-07', 'Unstoppable nosebleed'),
@@ -141,36 +141,37 @@ INSERT INTO patient_complaint (patient_id, complaint_id) VALUES
     ((3, 9), 'Discharged');
 
 -- PATIENT
-INSERT INTO patient (patient_id, patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+-- Patient table working
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
     ('Nowell', 'Bolton', '1989-04-05', '07001112222', 'nowell@bolton.com',
     '50', 'Tree Close', 'Hampshire', 'PO1 1QW',
     2, 11),
     ('Tawanda', 'Muyeye', '1948-03-05', '07968152882', 't.muyeye@gmail.com',
-     '50', 'Hamphire Drive', 'Maidstone', 'Hampshire','ME15 7ES',
-      0, 1),
+     '50', 'Hamphire Drive, Maidstone', 'Hampshire','ME15 7ES',
+      1, 1),
     ('Adrian', 'Burl', '1955-07-02', '07618156822', 'a.burl99@gmail.com',
-     '30', 'North Baddesley', 'Chandlers Ford', 'Hampshire', 'SO52 9JU',
-      0, 0),
+     '30', 'North Baddesley', 'Hampshire', 'SO52 9JU',
+      4, 9),
     ('Tadiwanashe', 'Ditima', '1968-12-12', '07115156832', 't.ditima@gmail.com',
      '22', 'Shakespeare Road', 'Portsmouth', 'PO1 5LF',
-      0, 2),
+      3, 2),
     ('Paul', 'Jackson', '2000-03-12', '07116786438', 'paulJackson@harvard.edu.us',
      '93', 'Dreighfield Drive', 'Berkshire', 'SL8 4QT',
       2, 3, 'Patient must be supervised 24/7'),
     ('Anthony', 'Pearson', '1970-05-20', '0716286851', 'A.Pearson@yahoo.co.uk',
      '33', 'Droorey Lane', 'Petersfield', 'UP2 4UJ',
       1, 2),
-    -- CHAR 5-9
+    CHAR 5-9
     ('Alexander','Ratliff','1967-10-22', '08008719187','enim@icloud.edu',
      '78','Faucibus St.','Bedfordshire','GL8 4DD',
      1,2),
     ('Demetria','Sutton','1986-11-21', '01513565815','dignissim@google.net',
-     '45','Risus. Av.','Rutland','S8 6AE',
+     '45', 'Williams Road','Rutland','S8 6AE',
      2,12,
      'Nullam enim. Sed nulla ante, iaculis nec,'),
     ('Callum','Francis','2001-12-22', '05548858371','vulputate.dui.nec@icloud.co.uk',
-     '45','Vel St.','Derbyshire','RF6 1AY',
-     0,4),
+     '45', 'Av Lane', 'Derbyshire','RF6 1AY',
+     3,4);
     ('Abel','Garrison','1972-02-22', '01487027927','elementum@icloud.com',
      '82','Magnis St.','Norfolk','W49 5PU',
      4,8,
