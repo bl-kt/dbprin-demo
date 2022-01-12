@@ -103,6 +103,9 @@ INSERT INTO patient VALUES
 -- id (serial), fname, lname, dob, phone, email,
 -- house no, street, county, postcode,
 --  gp id (fk), ward id (fk), comments
+    ('Nowell', 'Bolton', '1989-04-05', '07001112222', 'nowell@bolton.com', 
+    '50', 'Tree Close', 'Hampshire', 'PO1 1QW',
+    2, 11),
     ('Tawanda', 'Muyeye', '1948-03-05', '07968152882', 't.muyeye@gmail.com',
      "50", 'Hamphire Drive', 'Maidstone', 'Hampshire','ME15 7ES',
       0, 1),
