@@ -66,12 +66,12 @@ INSERT INTO ward (ward_name, ward_speciality, ward_comments) VALUES
 -- THIS WORKS
 INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward)
 VALUES
-    (1, TRUE, 29),
-    (4, FALSE, 30),
-    (5, FALSE, 31),
-    (7, TRUE, 32),
-    (9, TRUE, 33),
-    (10, FALSE, 34);
+    (1, TRUE, 28),
+    (4, FALSE, 20),
+    (5, FALSE, 21),
+    (7, TRUE, 22),
+    (9, TRUE, 23),
+    (10, FALSE, 24);
 
 -- STAFF DOCTORS
 -- Staff Doctor 
@@ -126,41 +126,41 @@ INSERT INTO general_practitioner (gp_name, gp_add1, gp_add2, gp_county, gp_postc
 INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
     ('Nowell', 'Bolton', '1989-04-05', '07001112222', 'nowell@bolton.com',
     '50', 'Tree Close', 'Hampshire', 'PO1 1QW',
-    2, 29),
+    2, 19),
     ('Tawanda', 'Muyeye', '1948-03-05', '07968152882', 't.muyeye@gmail.com',
      '50', 'Hamphire Drive, Maidstone', 'Hampshire','ME15 7ES',
-      1, 30),
+      1, 20),
     ('Adrian', 'Burl', '1955-07-02', '07618156822', 'a.burl99@gmail.com',
      '30', 'North Baddesley', 'Hampshire', 'SO52 9JU',
-      4, 31),
+      4, 21),
     ('Tadiwanashe', 'Ditima', '1968-12-12', '07115156832', 't.ditima@gmail.com',
      '22', 'Shakespeare Road', 'Portsmouth', 'PO1 5LF',
-      3, 32),
+      3, 22),
        ('Anthony', 'Pearson', '1970-05-20', '0716286851', 'A.Pearson@yahoo.co.uk',
      '33', 'Droorey Lane', 'Petersfield', 'UP2 4UJ',
-      1, 34),
+      1, 24),
     ('Alexander','Ratliff','1967-10-22', '08008719187','enim@icloud.edu',
      '78','Faucibus St.','Bedfordshire','GL8 4DD',
-     1, 35),
+     1, 25),
        ('Callum','Francis','2001-12-22', '05548858371','vulputate.dui.nec@icloud.co.uk',
      '45', 'Av Lane', 'Derbyshire','RF6 1AY',
-     3,37);
+     3, 27);
 
 INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
     ('Paul', 'Jackson', '2000-03-12', '07116786438', 'paulJackson@harvard.edu.us',
      '93', 'Dreighfield Drive', 'Berkshire', 'SL8 4QT',
-      2, 33, 'Patient must be supervised 24/7'),
+      2, 23, 'Patient must be supervised 24/7'),
     ('Demetria','Sutton','1986-11-21', '01513565815','dignissim@google.net',
      '45', 'Williams Road','Rutland','S8 6AE',
-     2,36,
+     2, 26,
      'Nullam enim. Sed nulla ante, iaculis nec,'),
     ('Abel','Garrison','1972-02-22', '01487027927','elementum@icloud.com',
      '82','Magnis St.','Norfolk','W49 5PU',
-     4,39,
+     4, 29,
      'a felis ullamcorper viverra. Maecenas iaculis aliquet'),
     ('Bertha','Bartlett','1993-10-22', '05687602427','parturient@outlook.edu',
      '56','Fermentum Ave','Merionethshire','U5V 6YP',
-     3,40,
+     3,20,
      'Duis ac arcu. Nunc mauris. Morbi non sapien');
 
 -- DOCTOR-TREATMENT
@@ -180,16 +180,16 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
 -- combo key (of patient id, complaint id), and comments
 -- This works but same as above, we have no official primary key
 INSERT INTO patient_complaint (patient_id, complaint_id, pat_com_comments) VALUES
-    (1, 1, 'Discharged'),
-    (2, 2, 'Treated'),
-    (4, 2, 'In treatment'),
-    (6, 3, 'In treatment'),
-    (5, 4, 'Discharged'),
-    (7, 5, 'Discharged'),
-    (8, 6, 'Referred externally'),
-    (9, 7, 'Discharged'),
-    (2, 8, 'preparing treatment'),
-    (3, 1, 'Discharged');
+    (10, 1, 'Discharged'),
+    (11, 2, 'Treated'),
+    (14, 2, 'In treatment'),
+    (16, 3, 'In treatment'),
+    (15, 4, 'Discharged'),
+    (12, 5, 'Discharged'),
+    (23, 6, 'Referred externally'),
+    (16, 7, 'Discharged'),
+    (21, 8, 'preparing treatment'),
+    (23, 1, 'Discharged');
 
 
 
