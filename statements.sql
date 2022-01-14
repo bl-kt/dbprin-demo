@@ -23,7 +23,15 @@ JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
 JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
 
 -- dont know what to do next lol
-
+SELECT ward_name, ward_speciality, CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name", CONCAT(staff_fname, ' ', staff_lname) AS "Nurses", is_head_nurse, gp_name, treatment_start FROM patient
+JOIN general_practitioner ON patient.patient_gp = general_practitioner.gp_id
+JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
+JOIN complaint ON complaint.complaint_id = patient_complaint.complaint_id
+JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
+JOIN ward ON patient.patient_ward = ward.ward_id
+JOIN ward_speciality ON ward.ward_speciality = ward_speciality.speciality_id
+JOIN staff_nurse ON staff_nurse.nurse_ward = ward.ward_id
+JOIN staff ON staff.staff_id = staff_nurse.nurse_id;
 -- need to do a joint on gp name and patient.
 
 -- which patient has left as a sql query
