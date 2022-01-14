@@ -216,7 +216,7 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
 --- ADDITIONAL DATA ---
 
 --- PATIENT DATA ---
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Dylan','Webster','1986-9-3','7856757553','in.faucibus@hotmail.ca','68','Parkland Retreat','West Lothian','YL5 0UO',3,33),
   ('Barbara','Beard','1975-5-31','7858395371','nonummy.ultricies@icloud.ca','24','Oakley Woodlands','Stirlingshire','K9 6GF',3,31),
   ('Talon','Hardy','1995-5-25','7485688107','ultricies.sem@hotmail.ca','61','Townsend Links','Lanarkshire','X26 8NP',3,34),
@@ -228,7 +228,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Lenore','Trevino','1973-5-21','7313357778','mi.enim.condimentum@hotmail.couk','17','Mortimer Glebe','Suffolk','D5P 1HD',1,35),
   ('Renee','Lamb','1987-6-16','7273554188','maecenas.malesuada.fringilla@outlook.org','45','Greyfriars Hills','Nottinghamshire','B86 9HG',3,29);
   
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Tucker','Freeman','1984-4-27','7886475847','nibh.lacinia.orci@outlook.com','40','Tudor Hills','Carmarthenshire','D56 6IH',3,34),
   ('Kato','Molina','1989-11-14','7239052051','facilisis@google.edu','55',' Alice Row','Lancashire','XK6F 1OM',4,35),
   ('Garth','Booth','1991-12-1','7276245877','orci.lobortis@aol.ca','1','Allen Knoll','Aberdeenshire','HK63 1FI',3,31),
@@ -236,12 +236,12 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Xaviera','Osborn','1999-7-5','7657768947','semper.cursus@google.edu','69','Greyfriars Hills','Cambridgeshire','W4 4CZ',2,30),
   ('Cain','Newman','1988-1-29','7854852236','nunc.ut.erat@icloud.ca','44','Ben Bhraggie Drive','Wiltshire','J21 9SK',4,41),
   ('Hu','Pugh','1980-1-30','7533768833','magnis.dis@outlook.org','20','Greyfriars Hills','Angus','L8 5FT',1,38),
-  ('Neville','Klein','1979-1-3','7633714597','rutrum.fusce.dolor@yahoo.org','83','St Leonard's Woodlands','Pembrokeshire','IJ38 6SX',2,33),
+  ('Neville','Klein','1979-1-3','7633714597','rutrum.fusce.dolor@yahoo.org','83','St Leonards Woodlands','Pembrokeshire','IJ38 6SX',2,33),
   ('Vanna','Vega','1997-7-19','7378576251','id.blandit@hotmail.edu','66','Tudor Hills','Staffordshire','Q0O 2TF',3,30),
   ('Cole','Rhodes','1984-9-26','7261563667','vestibulum.nec@google.couk','3','Ben Bhraggie Drive','Suffolk','AP4C 8EE',4,34);
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
-  ('Jessamine','Joseph','1998-3-28','7401358285','adipiscing@outlook.edu','94','St Leonard's Woodlands','Pembrokeshire','R6 6MS',2,37),
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
+  ('Jessamine','Joseph','1998-3-28','7401358285','adipiscing@outlook.edu','94','St Leonards Woodlands','Pembrokeshire','R6 6MS',2,37),
   ('Magee','Waters','1985-8-24','7467186958','libero.donec@protonmail.ca','11',' Belvoir Leaze','Wiltshire','D47 7EL',3,37),
   ('Kevyn','Mills','1971-6-1','7935145872','urna.nunc.quis@outlook.org','9',' Belvoir Leaze','Morayshire','DJ71 4RC',4,34),
   ('Kato','Bennett','1992-6-16','7480318236','fusce@outlook.couk','81','Kingfisher Pleasant','Nairnshire','K1V 4EM',4,30),
@@ -252,7 +252,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Sade','Gibson','1985-1-12','7188022795','ipsum@icloud.net','96','Strawberry Isaf','Norfolk','O9 7FS',3,30),
   ('Garrison','Snow','1973-12-6','7377572139','nec.tempus@aol.net','62','Church Farm Retreat','Argyllshire','ID2M 6QE',4,39);
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Jennifer','Deleon','1988-6-30','7326302652','augue.sed@aol.net','62','Adam Crest','Nairnshire','SN24 5EG',2,40),
   ('Gretchen','Blair','1983-4-25','7932038426','ac.libero.nec@google.edu','13','Brockley Wynd','Dorset','B9 2PE',2,35),
   ('Cassandra','Guerra','1979-2-2','7657179676','mollis.dui@aol.edu','45','Anchorage Way','Northumberland','X5P 4VE',3,31),
@@ -264,7 +264,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Tiger','Joyner','1995-12-20','7515827179','penatibus.et@google.com','19','Carver Lane','Monmouthshire','C80 5XO',4,32),
   ('Leslie','Coleman','1991-1-25','7271272556','eu.arcu.morbi@aol.edu','81','Parkland Retreat','Lanarkshire','VU95 0UD',3,34);
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Hedda','Castro','1982-2-14','7823788266','arcu.nunc@hotmail.org','17','Farriers Elms','Orkney','D7 7JR',5,30),
   ('Salvador','Wilkerson','1985-2-25','7898537848','gravida.molestie@hotmail.com','91',' Belvoir Leaze','Angus','C3M 4QO',5,29),
   ('Shad','Gordon','1996-6-12','7492482800','eleifend.egestas.sed@outlook.net','45','Brick Holt','Monmouthshire','Y95 7AQ',3,34),
@@ -276,7 +276,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Zelda','Witt','1984-8-17','7177657916','leo.elementum@hotmail.couk','32','Weavers Holt','Midlothian','TV8B 8XP',5,38),
   ('Alika','Brock','1990-5-30','7877663624','malesuada.fames@outlook.ca','55',' Belvoir Leaze','Pembrokeshire','Q8 8OC',1,40);
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Aphrodite','Garcia','1992-7-24','7255613553','pellentesque.habitant@outlook.net','64','Parkland Retreat','East Lothian','TE6 6WJ',4,40),
   ('Wesley','Holland','1994-4-30','7340024935','donec.egestas@google.ca','26','Townsend Links','Selkirkshire','CW0W 9RQ',4,36),
   ('Orli','Norton','1982-6-19','7977153916','habitant.morbi@aol.couk','41','Adam Crest','Devon','CL4D 4EX',4,38),
@@ -288,7 +288,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Quynn','Porter','1985-3-2','7168016159','torquent.per.conubia@hotmail.edu','17','Townsend Links','Dumfriesshire','L9 7HI',5,38),
   ('Jasper','Merritt','1992-10-1','7276726718','sit.amet.metus@protonmail.couk','13','Kingfisher Pleasant','Inverness-shire','H0T 3VK',2,39);
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Chancellor','Giles','1980-3-29','7968773702','ultrices.posuere.cubilia@icloud.couk','81','Ball Street','Kincardineshire','KR5 6YG',4,31),
   ('Halla','Puckett','1988-9-2','7952143886','sapien.molestie.orci@google.edu','99','Limes Retreat','Pembrokeshire','R5 7QE',1,38),
   ('Naomi','Hansen','1975-8-28','7481919239','aliquam@outlook.com','81','Cartmel Manor','Bedfordshire','DV85 7EE',1,29),
@@ -300,7 +300,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Elmo','Valentine','1982-5-25','7276316489','nonummy.fusce@icloud.com','35','Strawberry Isaf','Kent','SJ7Q 3YL',3,31),
   ('Caryn','Stokes','1998-7-4','7144683272','at.libero.morbi@icloud.ca','46','St Johns Banks','Nottinghamshire','E1W 3YX',3,40);
 
-  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Kane','Guerrero','1992-6-22','7563879661','senectus.et.netus@aol.com','70','Townsend Links','Lanarkshire','Q34 6BX',3,36),
   ('Lucas','Wright','1982-3-23','7698423048','metus@icloud.edu','48','Willow Glas','Merionethshire','GD34 1MT',3,32),
   ('Mona','Anthony','1977-2-10','7686240607','elit.pede@outlook.edu','65','Allen Knoll','Aberdeenshire','E1 8CT',4,42),
@@ -309,10 +309,10 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Meredith','Gomez','1995-7-22','7450163178','in.faucibus@hotmail.edu','22','Perkins Square','Roxburghshire','K7D 3MK',1,34),
   ('Lara','Lyons','1998-1-31','7987131545','iaculis@icloud.net','44','Winifred Drive','Inverness-shire','G5 8SS',1,31),
   ('Zeph','Castro','1986-6-15','7265188630','ultricies@outlook.com','47','Perkins Square','Devon','I7C 1GL',3,30),
-  ('Avram','Rios','1971-4-4','7761328467','sem.egestas@icloud.couk','43','St Leonard's Woodlands','Buteshire','P7B 8MD',5,41),
+  ('Avram','Rios','1971-4-4','7761328467','sem.egestas@icloud.couk','43','St Leonards Woodlands','Buteshire','P7B 8MD',5,41),
   ('Emma','Richards','1984-10-23','7450977557','tellus.id.nunc@yahoo.couk','19','Holbrook Loke','Morayshire','VF5J 1LI',4,41);
 
-  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Desiree','Ratliff','1993-4-11','7119118421','gravida.aliquam@aol.ca','64','Brampton Brow','Essex','VU03 5XW',2,29),
   ('Tucker','Bowman','1984-7-9','7633584345','pede.praesent@yahoo.com','23',' Alice Row','East Lothian','I43 2JB',1,30),
   ('Alexis','Lambert','1997-1-5','7843875577','litora.torquent@protonmail.couk','63','Willow Glas','Kirkcudbrightshire','OC8 5CI',3,34),
@@ -322,13 +322,13 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Davis','Huffman','1979-3-19','7206435472','quisque.fringilla@icloud.couk','9','Burnham Wood','Cheshire','DO7M 5XI',3,39),
   ('Anastasia','Hopkins','1997-8-20','7815134579','porta.elit@google.couk','67','Cartmel Manor','Wiltshire','U81 1PP',3,39),
   ('Thane','West','1991-3-13','7844688501','euismod.mauris@aol.org','69','Ben Bhraggie Drive','Wigtownshire','ZL15 3YV',2,41),
-  ('Kasper','O'brien','1981-12-9','7286663346','nisi.cum@hotmail.edu','22','Tudor Hills','Lancashire','G44 4JJ',3,35);
+  ('Kasper','Obrien','1981-12-9','7286663346','nisi.cum@hotmail.edu','22','Tudor Hills','Lancashire','G44 4JJ',3,35);
 
-  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments) VALUES
+  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
   ('Camden','Mathis','1997-11-12','7888826011','aliquet.diam@outlook.com','62','Winifred Drive','Fife','WO15 3ZY',4,33),
   ('Jacqueline','Day','1974-5-8','7305841752','felis@aol.couk','83','Sidney Hey','Banffshire','DP6G 7EJ',4,39),
   ('Judah','Maldonado','1990-1-13','7103961866','lorem.sit@protonmail.couk','48','Tudor Hills','Pembrokeshire','XR2 4VW',5,30),
-  ('Quyn','Rios','1976-10-21','7387768021','iaculis.aliquet@outlook.couk','1','St Leonard's Woodlands','Argyllshire','WW3X 4QB',1,31),
+  ('Quyn','Rios','1976-10-21','7387768021','iaculis.aliquet@outlook.couk','1','St Leonards Woodlands','Argyllshire','WW3X 4QB',1,31),
   ('Madison','Mccray','1997-5-2','7477521389','dolor.fusce.mi@hotmail.org','9','Old Glebe','Midlothian','X4 4XQ',2,36),
   ('Veda','Perkins','1993-12-23','7411439264','sed@aol.ca','99','Church Farm Retreat','Cornwall','GI6 8RG',2,34),
   ('Channing','Chambers','1983-6-1','7573441639','nibh@aol.net','11','Anchorage Way','Kent','X53 2RA',2,40),
