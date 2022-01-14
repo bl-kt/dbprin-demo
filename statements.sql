@@ -41,9 +41,6 @@ SELECT COUNT (*) FROM (
     SELECT CONCAT_WS(' ', patient_fname, patient_lname) FROM patient
     WHERE patient_comments IS NOT NULL) AS "Number of Patients With Comments";
 )
-SELECT COUNT(*) FROM (
-SELECT CONCAT_WS(' ', fname, mname, lname) FROM libuser
-WHERE mname IS NOT NULL) AS "no middle name";
 
 -- which patient has left as a sql query
 
