@@ -99,3 +99,8 @@ CREATE TABLE patient_complaint (
     pat_com_comments VARCHAR(40)
 );
 
+--dont use
+ALTER TABLE patient 
+ADD patient_discharged DATE;
+
+date_discharged DATE;
