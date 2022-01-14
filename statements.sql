@@ -31,3 +31,26 @@ JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
 -- which patient has left as a sql query
 
 -- USE STUFF THAT HE THOUGHT THIS YEAR LIKE ILIKE, GROUPBY, ETC
+
+
+
+
+-- further ideas:
+
+-- WARD RECORD https://prnt.sc/26dko9d
+
+-- Ward name
+-- Ward head nurse
+-- Ward Speciality
+-- Ward Nurses
+-- Patients in ward:
+-- Patient id
+-- patient name
+-- gp name
+-- date admitted (need to add to create statement?)
+
+
+
+
+-- DOCTOR RECORD
+-- idea: all previous patients treated by this doctor, for a certain ailment in a certain time period
