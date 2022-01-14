@@ -82,3 +82,8 @@ JOIN treatment t ON  pc.complaint_id = t.complaint_no
 JOIN doctor_treatment dt ON t.treatment_id = dt.treatment_id
 JOIN staff_doctor sd ON dt.doctor_id = sd.doctor_id
 WHERE sd.doctor_id = '2';
+
+-- AND t.treatment_end > '2022-01-05';
+-- I couldn't make this last bit work, we might need the admitted / discharged column.
+-- add order by / group by.
+
