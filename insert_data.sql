@@ -356,14 +356,14 @@ INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email
   ("Jason","Mays","24-07-1961","(0161) 895 1135","consectetuer@google.edu","28","Waltham Courtyard","Dorset","NL03 3SV"),
   ("Kenneth","Nixon","31-01-1959","0353 873 2383","dictum@aol.couk","79"," Ringwood Mews","Dumfriesshire","VV18 9NH"),
   ("Desirae","Welch","22-02-1986","(020) 8179 6547","ac.ipsum@protonmail.couk","87","Stuart Dell","Midlothian","OT3 7FU"),
-
+--24
   ("Alan","Ware","29-05-1962","0800 981147","non.arcu@outlook.org","24","Brackenlea","Renfrewshire","FB3M 6HY"),
   ("Melvin","Melton","20-11-1980","056 7474 2773","nullam.suscipit@aol.edu","31","Brookhouse Woods","Inverness-shire","HY78 6JW"),
   ("Yeo","Potter","20-10-1996","(016977) 5546","eu.metus@icloud.couk","27","Nicholson Rise","Lanarkshire","YC6 8IS"),
   ("Rashad","Rush","03-09-1962","056 2187 1803","cum.sociis@icloud.couk","47","Howden Lodge","Westmorland","VD1 3YP"),
   ("Jacob","Velez","01-09-1985","070 1811 6623","diam.pellentesque@hotmail.edu","27","Sandhurst Grove","Kent","BV2 4MB"),
 
-    ("Thomas","Shields","15-06-1984","(01676) 146149","sed.nec.metus@outlook.ca","76","Post Office Village","Gloucestershire","A6 7UP"),
+ -  ("Thomas","Shields","15-06-1984","(01676) 146149","sed.nec.metus@outlook.ca","76","Post Office Village","Gloucestershire","A6 7UP"),
   ("Nero","Marshall","23-03-1967","0845 46 48","orci@google.edu","52","Seaview Road","Ayrshire","JL8 4YO"),
   ("Libby","Higgins","27-02-1984","056 1164 7282","arcu@outlook.net","50","Dawson Ridge","Aberdeenshire","DL9J 5OO"),
   ("Freya","Doyle","05-04-1974","0845 46 44","dictum.sapien@protonmail.ca","97","Dundee Terrace","Wiltshire","R57 3UU"),
@@ -374,3 +374,42 @@ INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email
   ("Kelsey","Benton","05-08-1969","(016977) 1583","nulla@yahoo.couk","91","Nicholson Rise","Gloucestershire","O34 0NU"),
   ("Ann","Shepherd","23-08-1969","0800 1111","varius.nam@yahoo.net","51","Stone Court","Pembrokeshire","G7U 3SD"),
   ("Anika","Barr","01-07-1963","0500 224625","ante.dictum@hotmail.org","74","Howden Lodge","Yorkshire","G8 0VQ");
+
+  INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward)
+VALUES
+    (11, TRUE, 4),
+    (22, FALSE, 4),
+    (12, TRUE, 5),
+    (22, FALSE, 5),
+    (13, TRUE, 6),
+    (23, FALSE, 6),
+    (14, TRUE, 7),
+    (24, FALSE, 7),
+    (15, TRUE, 8),
+    (25, FALSE, 8),
+    (16, TRUE, 9),
+    (26, FALSE, 9),
+    (17, TRUE, 10),
+    (27, FALSE, 10),
+    (18, TRUE, 11),
+    (27, FALSE, 11),
+    (19, TRUE, 12),
+    (28, FALSE, 12),
+    (20, TRUE, 13),
+    (29, FALSE, 13),
+    (21, TRUE, 0),
+    (30, FALSE, 0),
+
+-- STAFF DOCTORS
+-- Staff Doctor 
+-- this works
+INSERT INTO staff_doctor (doctor_id) VALUES
+    (31),
+    (32),
+    (33),
+    (34),
+    (35),
+    (36),
+    (37),
+    (38),
+    (39);
