@@ -336,3 +336,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Upton','Ortiz','1969-1-17','7953570667','iaculis@outlook.net','67','Parkland Retreat','Lincolnshire','AX49 7ZT',3,30),
   ('Aimee','Maddox','1976-1-23','7816878591','tincidunt.aliquam.arcu@icloud.org','68','Heaton Copse','Wigtownshire','L2 3CO',2,42);
 
+-- PLEASE NO MORE PATIENTS
+
+INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email, staff_add1, staff_add2, staff_county, staff_postcode)
+VALUES
