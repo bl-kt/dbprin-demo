@@ -214,8 +214,6 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
 
 
 --- ADDITIONAL DATA ---
-
---- PATIENT DATA ---
 INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
     patient_discharged) VALUES
   ('Drew','Sherman','1986-01-4','07691615152','sherman.drew2146@yahoo.org','83','Beaulieu Isaf','Fife','W8L 9OA',3,6,'2020-28-31','2021-08-24'),
@@ -331,6 +329,8 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Wade','Farley','1956-07-23','02716996679','w.farley1994@hotmail.ca','82','Old Park Banks','Buckinghamshire','YW25 8JV',2,6,'2021-49-17','2021-40-8'),
   ('Shaine','Potter','1984-05-15','02385789504','potter_shaine5708@google.org','5','Laurel Acre','Denbighshire','G5E 1JE',2,12,'2021-52-31','2022-39-11');
 
+--- PATIENT DATA ---
+  
 
 
 
