@@ -13,7 +13,7 @@
 -- DTS date (Date Treatment Started)
 -- DTE date (Date Treatment Ended)
 
-SELECT CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name", patient_dob, gp_name, gp_add1, gp_add2, complaint_desc, CONCAT_WS(' ', staff_fname, staff_lname) AS "Hospital Doctor", treatment_desc, treatment_start, treatment_end from patient
+SELECT CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name", patient_dob, gp_name, gp_add1, gp_add2, complaint_desc, treatment_desc, treatment_start, treatment_end from patient
 JOIN general_practitioner ON patient.patient_gp = general_practitioner.gp_id
 JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
 -- JOIN staff ON 
@@ -23,9 +23,6 @@ JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
 JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
 
 -- dont know what to do next lol
-
-
--- need to do a joint on gp name and patient.
 
 
 -- which patient has left as a sql query
@@ -54,3 +51,10 @@ JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
 
 -- DOCTOR RECORD
 -- idea: all previous patients treated by this doctor, for a certain ailment in a certain time period
+
+SELECT patient_fname, patient_lname, CONCAT(staff_fname, ' ' ,staff_lname), treatment_start, treatment_end, treatment_desc FROM patient
+JOIN patient_complaint ON patient.patient_id = patient_complaint.patient_id
+JOIN treatment ON patient_complaint.complaint_id = treatment.complaint_no
+JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id
+JOIN staff_doctor ON doctor_treatment.treatment_id = staff_doctor.doctor_id
+JOIN staff on staff.staff_id =  staff_doctor.doctor_id;
