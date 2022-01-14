@@ -64,13 +64,18 @@ ORDER BY ward_name;
 -- DOCTOR RECORD
 -- idea: all previous patients treated by this doctor, for a certain ailment in a certain time period
 
-SELECT patient_fname, patient_lname, CONCAT(staff_fname, ' ' ,staff_lname), treatment_start, treatment_end, treatment_desc FROM patient
+SELECT patient_fname, patient_lname, CONCAT(staff_fname, ' ' ,staff_lname) AS "Doctor", treatment_start, treatment_end, treatment_desc FROM patient
 JOIN patient_complaint ON patient.patient_id = patient_complaint.patient_id
 JOIN treatment ON patient_complaint.complaint_id = treatment.complaint_no
 JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id
 JOIN staff_doctor ON doctor_treatment.treatment_id = staff_doctor.doctor_id
 JOIN staff on staff.staff_id =  staff_doctor.doctor_id;
 
+<<<<<<< HEAD
+SELECT patient_fname, patient_lname, gp_name from patient
+JOIN general_practitioner ON patient_gp = GP_id;
+
+=======
 -- Which patients are being treated by a particular doctor - E.g. if a doctor is off sick and patients 
 -- need to be allocated to new doctors. Is this too simple? holly working on this 
 SELECT p.patient_id AS "Patient ID", CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name", p.patient_ward AS "Ward", p.patient_comments AS "Comments", c.complaint_desc AS "Complaint", t.treatment_id AS "Treatment ID", t.treatment_desc AS  "Treatment", dt.doctor_id AS "Doctor Name"
@@ -81,3 +86,4 @@ JOIN treatment t ON  pc.complaint_id = t.complaint_no
 JOIN doctor_treatment dt ON t.treatment_id = dt.treatment_id
 JOIN staff_doctor sd ON dt.doctor_id = sd.doctor_id
 WHERE sd.doctor_id = '2';
+>>>>>>> 06db05a75308d07eec088ed86cbb6106feecb8a7
