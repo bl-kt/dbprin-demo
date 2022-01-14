@@ -367,7 +367,7 @@ INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email
   ("Rashad","Rush","03-09-1962","056 2187 1803","cum.sociis@icloud.couk","47","Howden Lodge","Westmorland","VD1 3YP"),
   ("Jacob","Velez","01-09-1985","070 1811 6623","diam.pellentesque@hotmail.edu","27","Sandhurst Grove","Kent","BV2 4MB"),
 
- -  ("Thomas","Shields","15-06-1984","(01676) 146149","sed.nec.metus@outlook.ca","76","Post Office Village","Gloucestershire","A6 7UP"),
+  ("Thomas","Shields","15-06-1984","(01676) 146149","sed.nec.metus@outlook.ca","76","Post Office Village","Gloucestershire","A6 7UP"),
   ("Nero","Marshall","23-03-1967","0845 46 48","orci@google.edu","52","Seaview Road","Ayrshire","JL8 4YO"),
   ("Libby","Higgins","27-02-1984","056 1164 7282","arcu@outlook.net","50","Dawson Ridge","Aberdeenshire","DL9J 5OO"),
   ("Freya","Doyle","05-04-1974","0845 46 44","dictum.sapien@protonmail.ca","97","Dundee Terrace","Wiltshire","R57 3UU"),
