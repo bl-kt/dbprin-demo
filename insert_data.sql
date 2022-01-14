@@ -1,9 +1,5 @@
 -- FOLLOW THE INSERT STATEMENTS IN THIS ORDER DUE TO FOREIGN KEYS!
 
--- STAFF
--- id (serial, so no need to put), fname, lname, dob, phone, email, house no/add1, street, county, postcode
-    -- id's 0-4
---THIS WORKS!!!
 INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email, staff_add1, staff_add2, staff_county, staff_postcode)
 VALUES
     ('Jaci', 'Kingsley', '1991-08-19', '012345678', 'jaci@hospital.com',
@@ -27,45 +23,67 @@ VALUES
     ('Cade','Lloyd','1982-05-01', '01916375276','ornare.fusce.mollis@yahoo.ca',
      '19','Quisque Av','Morayshire','FR3 2LC');
 
--- WARD SPECIALITY
--- speciality id (serial), name, comments
--- THIS WORKS
-INSERT INTO ward_speciality (speciality_name, speciality_comments) VALUES
-    ('A & E', 'Accident and Emergency'), 
-    ('General', 'For general/basic medical concerns'), 
-    ('Pediatrics', 'Specialist childrens ward'), 
-    ('COVID ward', 'Specialist Coronavirus / Covid-19 Ward'),
-    ('Maternity', 'Maternity ward'),
-    ('Orthopedic', 'Bones and Muscle specialist');
+INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email, staff_add1, staff_add2, staff_county, staff_postcode) VALUES
+ ('Hoyt','Steele','13-08-1950','076 7525 2458','sed.eu.nibh@yahoo.net','32',' Rock Lawns','Dumfriesshire','SI73 9WH'),
+  ('Belle','Mclaughlin','16-04-1975','0845 46 41','ut@protonmail.edu','32','Ladywell Hills','Clackmannanshire','AB68 7MR'),
+  ('Kaitlin','Simon','05-07-1967','0845 46 43','mauris.quis@protonmail.org','86','Saddlers Meadows','Inverness-shire','RX3 0VF'),
+  ('Vielka','Haney','03-07-1963','(027) 1149 1724','montes.nascetur@aol.net','49','Ladywell Hills','Glamorgan','DT6 8PO'),
+  ('Cedric','Alford','02-05-1957','07872 518810','eu.erat.semper@outlook.com','65','Sandhurst Grove','Argyllshire','I52 4ES'),
 
--- 'ward specialty' will be the foreign key from ward_specialty
+  ('Levi','Morrow','13-06-1962','0938 286 3391','ultricies.dignissim@icloud.net','37',' Peel Avenue','Merionethshire','X0 7HG'),
+  ('Nathaniel','Vazquez','25-02-1984','056 0635 1957','non.nisi@google.org','45','Wheatsheaf Fairway','Lanarkshire','G4R 6TN'),
+  ('Edan','Dennis','21-04-1963','07624 019640','non.justo.proin@icloud.edu','34','Melrose Cliff','Argyllshire','V6 5RK'),
+  ('Tyrone','Fisher','04-11-1978','(01215) 26372','sed@protonmail.org','25','Raven Brae','Denbighshire','J2 6OR'),
+  ('Garrison','Gallagher','20-09-1990','(01567) 12654','tellus.sem.mollis@outlook.couk','13','Raven Brae','Herefordshire','K33 8RJ'),
 
--- WARD
--- Named all these after QA (local hospital) wards: https://www.porthosp.nhs.uk/wards/?rows=0
--- ward id (serial), ward name, speciality (fk), comments
--- THIS WORKS
-INSERT INTO ward (ward_name, ward_speciality, ward_comments) VALUES
-    ('A8', 2 , 'Operates 24/7'), -- has head nurse
-    ('A6', 2 , 'A&E Overflow'), -- has head nurse
-    ('B4', 5 , 'Orthopedic outpatient'), -- has head nurse
-    ('B7', 5 , 'Orthopedic surgery'),
-    ('D4', 1 ,'For general/basic medical concerns'),
-    ('D1', 1, 'Blood Tests'),
-    ('D2', 1, 'LFT/PCR Covid Tests'),
-    ('Starfish', 2, 'Childrens surgery'), --these are adorable?
-    ('Shipwreck', 2, 'Childrens outpatients'),
-    ('C1', 3, 'ICU for Coronavirus patients that have tested positive and require special assistance'),
-    ('C2', 3, 'COVID General'),
-    ('E9', 4, 'Maternity Ward'),
-    ('E11', 4, 'Emergency Maternity Ward/Overflow'),
-    ('A2', 5,'Muscle and bone specialty ward');
--- 14 wards 0-13
+  ('Chase','Duran','01-04-1971','07553 131725','natoque@hotmail.org','74','Saddlers Meadows','Kinross-shire','RK3I 8GE'),
+  ('Fleur','Jefferson','27-07-1999','(0151) 407 8704','cras.eu.tellus@hotmail.com','32','Spinney Passage','Kincardineshire','J4 6DR'),
+  ('Jason','Mays','24-07-1961','(0161) 895 1135','consectetuer@google.edu','28','Waltham Courtyard','Dorset','NL03 3SV'),
+  ('Kenneth','Nixon','31-01-1959','0353 873 2383','dictum@aol.couk','79',' Ringwood Mews','Dumfriesshire','VV18 9NH'),
+  ('Desirae','Welch','22-02-1986','(020) 8179 6547','ac.ipsum@protonmail.couk','87','Stuart Dell','Midlothian','OT3 7FU'),
 
--- STAFF NURSES
--- staff id, is head nurse (bool), ward
--- THIS WORKS
+  ('Alan','Ware','29-05-1962','0800 981147','non.arcu@outlook.org','24','Brackenlea','Renfrewshire','FB3M 6HY'),
+  ('Melvin','Melton','20-11-1980','056 7474 2773','nullam.suscipit@aol.edu','31','Brookhouse Woods','Inverness-shire','HY78 6JW'),
+  ('Yeo','Potter','20-10-1996','(016977) 5546','eu.metus@icloud.couk','27','Nicholson Rise','Lanarkshire','YC6 8IS'),
+  ('Rashad','Rush','03-09-1962','056 2187 1803','cum.sociis@icloud.couk','47','Howden Lodge','Westmorland','VD1 3YP'),
+  ('Jacob','Velez','01-09-1985','070 1811 6623','diam.pellentesque@hotmail.edu','27','Sandhurst Grove','Kent','BV2 4MB'),
+
+  ('Thomas','Shields','15-06-1984','(01676) 146149','sed.nec.metus@outlook.ca','76','Post Office Village','Gloucestershire','A6 7UP'),
+  ('Nero','Marshall','23-03-1967','0845 46 48','orci@google.edu','52','Seaview Road','Ayrshire','JL8 4YO'),
+  ('Libby','Higgins','27-02-1984','056 1164 7282','arcu@outlook.net','50','Dawson Ridge','Aberdeenshire','DL9J 5OO'),
+  ('Freya','Doyle','05-04-1974','0845 46 44','dictum.sapien@protonmail.ca','97','Dundee Terrace','Wiltshire','R57 3UU'),
+  ('Hadassah','Miranda','29-03-1979','0397 874 6865','sed.congue@icloud.edu','39','Stone Court','Banffshire','O83 2XR'),
+
+    ('Carlos','Manning','23-12-1996','0800 1111','cum.sociis@yahoo.couk','77','Shapwick Road','Lancashire','MG53 9UG'),
+  ('Magee','Logan','05-05-1984','(01767) 422465','pede.blandit.congue@aol.edu','73','Brookhouse Woods','Banffshire','V1 3WJ'),
+  ('Kelsey','Benton','05-08-1969','(016977) 1583','nulla@yahoo.couk','91','Nicholson Rise','Gloucestershire','O34 0NU'),
+  ('Ann','Shepherd','23-08-1969','0800 1111','varius.nam@yahoo.net','51','Stone Court','Pembrokeshire','G7U 3SD'),
+  ('Anika','Barr','01-07-1963','0500 224625','ante.dictum@hotmail.org','74','Howden Lodge','Yorkshire','G8 0VQ');
+
 INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward)
 VALUES
+    (11, TRUE, 4),
+    (22, FALSE, 4),
+    (12, TRUE, 5),
+    (22, FALSE, 5),
+    (13, TRUE, 6),
+    (23, FALSE, 6),
+    (14, TRUE, 7),
+    (24, FALSE, 7),
+    (15, TRUE, 8),
+    (25, FALSE, 8),
+    (16, TRUE, 9),
+    (26, FALSE, 9),
+    (17, TRUE, 10),
+    (27, FALSE, 10),
+    (18, TRUE, 11),
+    (27, FALSE, 11),
+    (19, TRUE, 12),
+    (28, FALSE, 12),
+    (20, TRUE, 13),
+    (29, FALSE, 13),
+    (21, TRUE, 0),
+    (30, FALSE, 0),
     (1, TRUE, 28),
     (4, FALSE, 20),
     (5, FALSE, 21),
@@ -73,17 +91,48 @@ VALUES
     (9, TRUE, 23),
     (10, FALSE, 24);
 
--- STAFF DOCTORS
--- Staff Doctor 
--- this works
-INSERT INTO staff_doctor (doctor_id) VALUES
+INSERT INTO staff_doctor (doctor_id)
+VALUES
+    (31),
+    (32),
+    (33),
+    (34),
+    (35),
+    (36),
+    (37),
+    (38),
+    (39),
     (2),
     (3),
     (6),
     (8);
 
--- COMPLAINT
--- Complaint table working
+INSERT INTO ward_speciality (speciality_name, speciality_comments)
+VALUES
+    ('A & E', 'Accident and Emergency'), 
+    ('General', 'For general/basic medical concerns'), 
+    ('Pediatrics', 'Specialist childrens ward'), 
+    ('COVID ward', 'Specialist Coronavirus / Covid-19 Ward'),
+    ('Maternity', 'Maternity ward'),
+    ('Orthopedic', 'Bones and Muscle specialist');
+
+INSERT INTO ward (ward_name, ward_speciality, ward_comments) 
+VALUES
+    ('A8', 2 , 'Operates 24/7'),
+    ('A6', 2 , 'A&E Overflow'),
+    ('B4', 5 , 'Orthopedic outpatient'),
+    ('B7', 5 , 'Orthopedic surgery'),
+    ('D4', 1 ,'For general/basic medical concerns'),
+    ('D1', 1, 'Blood Tests'),
+    ('D2', 1, 'LFT/PCR Covid Tests'),
+    ('Starfish', 2, 'Childrens surgery'),
+    ('Shipwreck', 2, 'Childrens outpatients'),
+    ('C1', 3, 'ICU for Coronavirus patients that have tested positive and require special assistance'),
+    ('C2', 3, 'COVID General'),
+    ('E9', 4, 'Maternity Ward'),
+    ('E11', 4, 'Emergency Maternity Ward/Overflow'),
+    ('A2', 5,'Muscle and bone specialty ward');
+
 INSERT INTO complaint (complaint_date, complaint_desc) VALUES
     ('2021-05-24', 'A dry cough and a flu'),
     ('2021-05-25', 'Chest infection'),
@@ -94,8 +143,6 @@ INSERT INTO complaint (complaint_date, complaint_desc) VALUES
     ('2021-01-29', 'Tics, uncontrollable movements and sounds'),
     ('2021-10-18', 'Covid 19 Symptoms unable to treat at home');
 
-    -- TREATMENT
--- Treatment table works
 INSERT INTO treatment (treatment_start, treatment_end, treatment_desc, complaint_no) VALUES
     ('2021-05-24', '2021-05-24', 'paracetemol and cough syrup', 1),
     ('2021-05-25', '2021-06-01', 'Amoxicillin', 2),
@@ -106,8 +153,6 @@ INSERT INTO treatment (treatment_start, treatment_end, treatment_desc, complaint
     ('2021-04-06', '2021-04-06', 'External referal', 7),
     ('2021-10-18', '2021-11-02', 'Admittance to covid ward', 8);
 
--- GP
--- Table working
 INSERT INTO general_practitioner (gp_name, gp_add1, gp_add2, gp_county, gp_postcode) VALUES
     ('Somers Town Health Centre',
      'Somerstown Central, Tyseley Road', 'Southsea', 'Hampshire', 'PO5 4EZ'),
@@ -120,9 +165,6 @@ INSERT INTO general_practitioner (gp_name, gp_add1, gp_add2, gp_county, gp_postc
     ('Vernsborne Surgery',
      '65', 'Narnsmouth', 'Hammingdom', 'HA4 L37');
 
--- PATIENT
--- Patient table working
--- These needed to be seperated into 2 insert statements due to some having comments and some not.
 INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
     ('Nowell', 'Bolton', '1989-04-05', '07001112222', 'nowell@bolton.com',
     '50', 'Tree Close', 'Hampshire', 'PO1 1QW',
@@ -163,11 +205,8 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
      3,20,
      'Duis ac arcu. Nunc mauris. Morbi non sapien');
 
--- DOCTOR-TREATMENT
---  combo key (of doctor id, then treatment id), comments
--- This works
--- Not sure about this - it works but we have no primary key and no primary column. We may need to 
--- alter the table and add a column for composite key?
+-- ##################################################
+
 INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
     (2, 1),
     (6, 3),
@@ -176,9 +215,6 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
     (2, 6),
     (3, 7);
 
--- PATIENT-COMPLAINT
--- combo key (of patient id, complaint id), and comments
--- This works but same as above, we have no official primary key
 INSERT INTO patient_complaint (patient_id, complaint_id, pat_com_comments) VALUES
     (3, 1, 'Discharged'),
     (5, 2, 'Treated'),
@@ -341,79 +377,3 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Aimee','Maddox','1976-1-23','7816878591','tincidunt.aliquam.arcu@icloud.org','68','Heaton Copse','Wigtownshire','L2 3CO',2,22);
 
 -- PLEASE NO MORE PATIENTS
-
-INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email, staff_add1, staff_add2, staff_county, staff_postcode) VALUES
- ("Hoyt","Steele","13-08-1950","076 7525 2458","sed.eu.nibh@yahoo.net","32"," Rock Lawns","Dumfriesshire","SI73 9WH"),
-  ("Belle","Mclaughlin","16-04-1975","0845 46 41","ut@protonmail.edu","32","Ladywell Hills","Clackmannanshire","AB68 7MR"),
-  ("Kaitlin","Simon","05-07-1967","0845 46 43","mauris.quis@protonmail.org","86","Saddlers Meadows","Inverness-shire","RX3 0VF"),
-  ("Vielka","Haney","03-07-1963","(027) 1149 1724","montes.nascetur@aol.net","49","Ladywell Hills","Glamorgan","DT6 8PO"),
-  ("Cedric","Alford","02-05-1957","07872 518810","eu.erat.semper@outlook.com","65","Sandhurst Grove","Argyllshire","I52 4ES"),
-
-  ("Levi","Morrow","13-06-1962","0938 286 3391","ultricies.dignissim@icloud.net","37"," Peel Avenue","Merionethshire","X0 7HG"),
-  ("Nathaniel","Vazquez","25-02-1984","056 0635 1957","non.nisi@google.org","45","Wheatsheaf Fairway","Lanarkshire","G4R 6TN"),
-  ("Edan","Dennis","21-04-1963","07624 019640","non.justo.proin@icloud.edu","34","Melrose Cliff","Argyllshire","V6 5RK"),
-  ("Tyrone","Fisher","04-11-1978","(01215) 26372","sed@protonmail.org","25","Raven Brae","Denbighshire","J2 6OR"),
-  ("Garrison","Gallagher","20-09-1990","(01567) 12654","tellus.sem.mollis@outlook.couk","13","Raven Brae","Herefordshire","K33 8RJ"),
-
-  ("Chase","Duran","01-04-1971","07553 131725","natoque@hotmail.org","74","Saddlers Meadows","Kinross-shire","RK3I 8GE"),
-  ("Fleur","Jefferson","27-07-1999","(0151) 407 8704","cras.eu.tellus@hotmail.com","32","Spinney Passage","Kincardineshire","J4 6DR"),
-  ("Jason","Mays","24-07-1961","(0161) 895 1135","consectetuer@google.edu","28","Waltham Courtyard","Dorset","NL03 3SV"),
-  ("Kenneth","Nixon","31-01-1959","0353 873 2383","dictum@aol.couk","79"," Ringwood Mews","Dumfriesshire","VV18 9NH"),
-  ("Desirae","Welch","22-02-1986","(020) 8179 6547","ac.ipsum@protonmail.couk","87","Stuart Dell","Midlothian","OT3 7FU"),
---24
-  ("Alan","Ware","29-05-1962","0800 981147","non.arcu@outlook.org","24","Brackenlea","Renfrewshire","FB3M 6HY"),
-  ("Melvin","Melton","20-11-1980","056 7474 2773","nullam.suscipit@aol.edu","31","Brookhouse Woods","Inverness-shire","HY78 6JW"),
-  ("Yeo","Potter","20-10-1996","(016977) 5546","eu.metus@icloud.couk","27","Nicholson Rise","Lanarkshire","YC6 8IS"),
-  ("Rashad","Rush","03-09-1962","056 2187 1803","cum.sociis@icloud.couk","47","Howden Lodge","Westmorland","VD1 3YP"),
-  ("Jacob","Velez","01-09-1985","070 1811 6623","diam.pellentesque@hotmail.edu","27","Sandhurst Grove","Kent","BV2 4MB"),
-
- -  ("Thomas","Shields","15-06-1984","(01676) 146149","sed.nec.metus@outlook.ca","76","Post Office Village","Gloucestershire","A6 7UP"),
-  ("Nero","Marshall","23-03-1967","0845 46 48","orci@google.edu","52","Seaview Road","Ayrshire","JL8 4YO"),
-  ("Libby","Higgins","27-02-1984","056 1164 7282","arcu@outlook.net","50","Dawson Ridge","Aberdeenshire","DL9J 5OO"),
-  ("Freya","Doyle","05-04-1974","0845 46 44","dictum.sapien@protonmail.ca","97","Dundee Terrace","Wiltshire","R57 3UU"),
-  ("Hadassah","Miranda","29-03-1979","0397 874 6865","sed.congue@icloud.edu","39","Stone Court","Banffshire","O83 2XR"),
-
-    ("Carlos","Manning","23-12-1996","0800 1111","cum.sociis@yahoo.couk","77","Shapwick Road","Lancashire","MG53 9UG"),
-  ("Magee","Logan","05-05-1984","(01767) 422465","pede.blandit.congue@aol.edu","73","Brookhouse Woods","Banffshire","V1 3WJ"),
-  ("Kelsey","Benton","05-08-1969","(016977) 1583","nulla@yahoo.couk","91","Nicholson Rise","Gloucestershire","O34 0NU"),
-  ("Ann","Shepherd","23-08-1969","0800 1111","varius.nam@yahoo.net","51","Stone Court","Pembrokeshire","G7U 3SD"),
-  ("Anika","Barr","01-07-1963","0500 224625","ante.dictum@hotmail.org","74","Howden Lodge","Yorkshire","G8 0VQ");
-
-  INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward)
-VALUES
-    (11, TRUE, 4),
-    (22, FALSE, 4),
-    (12, TRUE, 5),
-    (22, FALSE, 5),
-    (13, TRUE, 6),
-    (23, FALSE, 6),
-    (14, TRUE, 7),
-    (24, FALSE, 7),
-    (15, TRUE, 8),
-    (25, FALSE, 8),
-    (16, TRUE, 9),
-    (26, FALSE, 9),
-    (17, TRUE, 10),
-    (27, FALSE, 10),
-    (18, TRUE, 11),
-    (27, FALSE, 11),
-    (19, TRUE, 12),
-    (28, FALSE, 12),
-    (20, TRUE, 13),
-    (29, FALSE, 13),
-    (21, TRUE, 0),
-    (30, FALSE, 0),
-
--- STAFF DOCTORS
--- Staff Doctor 
--- this works
-INSERT INTO staff_doctor (doctor_id) VALUES
-    (31),
-    (32),
-    (33),
-    (34),
-    (35),
-    (36),
-    (37),
-    (38),
-    (39);
