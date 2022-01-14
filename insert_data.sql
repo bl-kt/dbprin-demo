@@ -216,168 +216,125 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
 --- ADDITIONAL DATA ---
 
 --- PATIENT DATA ---
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Dylan','Webster','1986-9-3','7856757553','in.faucibus@hotmail.ca','68','Parkland Retreat','West Lothian','YL5 0UO',3,15),
-  ('Barbara','Beard','1975-5-31','7858395371','nonummy.ultricies@icloud.ca','24','Oakley Woodlands','Stirlingshire','K9 6GF',3,16),
-  ('Talon','Hardy','1995-5-25','7485688107','ultricies.sem@hotmail.ca','61','Townsend Links','Lanarkshire','X26 8NP',3,24),
-  ('Daniel','Taylor','1986-9-24','7311770785','interdum.libero@aol.net','31','Greyfriars Hills','Flintshire','ZC70 4VG',2,21),
-  ('Desiree','Donaldson','1987-4-10','7985457711','gravida.praesent.eu@yahoo.org','91','Old Glebe','Inverness-shire','CM1 2HE',2,21),
-  ('Richard','Waters','1991-4-17','7285444172','egestas.aliquam.nec@icloud.org','47','Adam Crest','Flintshire','GB5 6TM',5,28),
-  ('Audra','Chapman','1975-11-4','7230266471','mi.aliquam.gravida@outlook.edu','97','Greyfriars Hills','Argyllshire','YD3 3CH',4,17),
-  ('Caryn','Meyers','1971-9-17','7115272419','non.dapibus@icloud.org','84','Ashton Paddock','Buckinghamshire','ZD7X 5SQ',2,25),
-  ('Lenore','Trevino','1973-5-21','7313357778','mi.enim.condimentum@hotmail.couk','17','Mortimer Glebe','Suffolk','D5P 1HD',1,25),
-  ('Renee','Lamb','1987-6-16','7273554188','maecenas.malesuada.fringilla@outlook.org','45','Greyfriars Hills','Nottinghamshire','B86 9HG',3,28);
-  
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Tucker','Freeman','1984-4-27','7886475847','nibh.lacinia.orci@outlook.com','40','Tudor Hills','Carmarthenshire','D56 6IH',3,24),
-  ('Kato','Molina','1989-11-14','7239052051','facilisis@google.edu','55',' Alice Row','Lancashire','XK6F 1OM',4,25),
-  ('Garth','Booth','1991-12-1','7276245877','orci.lobortis@aol.ca','1','Allen Knoll','Aberdeenshire','HK63 1FI',3,23),
-  ('Galena','Pugh','2001-6-14','7662415582','dolor.tempus.non@protonmail.com','44','Farriers Elms','Angus','IL4 9FY',1,21),
-  ('Xaviera','Osborn','1999-7-5','7657768947','semper.cursus@google.edu','69','Greyfriars Hills','Cambridgeshire','W4 4CZ',2,22),
-  ('Cain','Newman','1988-1-29','7854852236','nunc.ut.erat@icloud.ca','44','Ben Bhraggie Drive','Wiltshire','J21 9SK',4,19),
-  ('Hu','Pugh','1980-1-30','7533768833','magnis.dis@outlook.org','20','Greyfriars Hills','Angus','L8 5FT',1,28),
-  ('Neville','Klein','1979-1-3','7633714597','rutrum.fusce.dolor@yahoo.org','83','St Leonards Woodlands','Pembrokeshire','IJ38 6SX',2,23),
-  ('Vanna','Vega','1997-7-19','7378576251','id.blandit@hotmail.edu','66','Tudor Hills','Staffordshire','Q0O 2TF',3,22),
-  ('Cole','Rhodes','1984-9-26','7261563667','vestibulum.nec@google.couk','3','Ben Bhraggie Drive','Suffolk','AP4C 8EE',4,15);
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES
+  ('Drew','Sherman','1986-01-4','07691615152','sherman.drew2146@yahoo.org','83','Beaulieu Isaf','Fife','W8L 9OA',3,6,'2020-28-31','2021-08-24'),
+  ('Herman','Mcfadden','1974-03-17','07426714887','herman_mcfadden2985@outlook.com','4','Glebe Wharf','Banffshire','KI55 1LS',2,3,'2020-24-8','2021-46-11'),
+  ('Nadine','Terry','1984-09-24','07251241739','nadineterry@outlook.ca','97','Gipsy Hall','Wigtownshire','QU4U 6QV',3,12,'2020-53-4','2021-34-29'),
+  ('Tamekah','Buck','1966-03-17','02432729657','b.tamekah4602@aol.com','60','Deans Garden','Cornwall','C6C 8QC',2,9,'2020-13-29','2021-52-1'),
+  ('Pamela','Fuentes','1973-10-21','02424937542','fuentes-pamela8778@outlook.com','45','Thompson Strand','West Lothian','S7V 2BV',2,3,'2020-35-21','2021-27-21'),
+  ('Jonah','Lloyd','1973-09-7','07747158832','l.jonah@hotmail.com','81','Fleming Newydd','Dumfriesshire','TJ6 2DW',3,1,'2020-29-18','2021-46-22'),
+  ('Maggie','Simpson','1967-09-17','02953315339','maggie_simpson@outlook.ca','12','Stewart Side','Buteshire','U86 7IL',4,7,'2020-20-27','2021-49-10'),
+  ('Bethany','Wolfe','1977-03-28','07946668941','b_wolfe8804@outlook.ca','2','Peveril Mews','Selkirkshire','EU2 7TH',4,2,'2020-26-7','2021-57-18'),
+  ('Tate','Pitts','1979-07-9','02864568861','p-tate5332@icloud.net','3','Deer Park Garden','Kirkcudbrightshire','WO6F 2XM',3,8,'2020-37-21','2021-37-5'),
+  ('Hu','Baker','1954-05-6','07313178171','h-baker581@yahoo.com','7','Hengistbury Road','Hampshire','PL3 4MX',1,10,'2020-03-19','2021-01-5');
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Jessamine','Joseph','1998-3-28','7401358285','adipiscing@outlook.edu','94','St Leonards Woodlands','Pembrokeshire','R6 6MS',2,17),
-  ('Magee','Waters','1985-8-24','7467186958','libero.donec@protonmail.ca','11',' Belvoir Leaze','Wiltshire','D47 7EL',3,17),
-  ('Kevyn','Mills','1971-6-1','7935145872','urna.nunc.quis@outlook.org','9',' Belvoir Leaze','Morayshire','DJ71 4RC',4,28),
-  ('Kato','Bennett','1992-6-16','7480318236','fusce@outlook.couk','81','Kingfisher Pleasant','Nairnshire','K1V 4EM',4,25),
-  ('Leah','Noel','1976-10-22','7885513143','dui.nec@outlook.com','55','Mortimer Glebe','Dumfriesshire','D46 1BS',1,23),
-  ('Jeremy','Mosley','1999-10-10','7025176522','quis.tristique.ac@yahoo.edu','9','St Johns Banks','Denbighshire','Q95 3HF',4,27),
-  ('Tara','Newman','1993-11-24','7333133813','et@google.couk','32','Limes Hill','Clackmannanshire','DJ78 9XU',1,21),
-  ('Avye','Roach','1988-10-30','7895960641','quam.quis@aol.net','26','Old Glebe','Westmorland','M78 2SW',2,23),
-  ('Sade','Gibson','1985-1-12','7188022795','ipsum@icloud.net','96','Strawberry Isaf','Norfolk','O9 7FS',3,20),
-  ('Garrison','Snow','1973-12-6','7377572139','nec.tempus@aol.net','62','Church Farm Retreat','Argyllshire','ID2M 6QE',4,19);
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES
+  ('Autumn','Gentry','1986-06-21','02485528516','gentry_autumn@outlook.com','53','Berkeley Road','Banffshire','WH6S 3OK',5,11,'2020-12-23','2021-37-3'),
+  ('Quinlan','Rice','1970-05-10','07868986739','quinlan_rice7311@hotmail.net','31','Ffordd Tresaith','West Lothian','DS6L 1XM',4,5,'2020-03-2','2021-22-19'),
+  ('Solomon','Kelly','1948-02-19','07740135982','kelly.solomon5249@google.ca','37','Berkeley Road','Kirkcudbrightshire','JZ83 8LR',2,9,'2021-42-26','2021-07-30'),
+  ('Leah','Miranda','1958-09-18','07481477445','leah.miranda@outlook.net','83','Lock Crest','Nairnshire','E1 6ZQ',1,9,'2020-55-14','2021-16-8'),
+  ('Uriel','Kramer','1993-03-12','07758341444','krameruriel3670@google.org','12','Hengistbury Road','Brecknockshire','XS6 5ML',2,11,'2020-47-5','2021-39-12'),
+  ('Shana','Flowers','1952-01-26','02161861465','f-shana@hotmail.ca','89','Gipsy Hall','Stirlingshire','OW20 3DD',4,4,'2020-02-5','2022-18-2'),
+  ('Signe','Glenn','1962-04-1','07956740106','s.glenn9523@google.org','75','Old Park Banks','Norfolk','TF3 1YM',4,2,'2020-29-28','2021-41-9'),
+  ('Chava','Peters','1985-04-20','02267318860','peterschava3518@protonmail.com','47','Westmorland Vale','Radnorshire','F33 1MS',3,2,'2020-39-27','2021-22-10'),
+  ('Hadley','Campbell','1989-01-26','02506808874','c_hadley@protonmail.org','67','Lock Crest','Berwickshire','J5 4GP',2,1,'2020-52-15','2021-52-23'),
+  ('Brody','Harper','1974-04-19','07067843842','brody-harper1920@aol.ca','53','Ffordd Tresaith','Shetland','L50 1RL',1,2,'2020-44-21','2021-48-21');
+
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES
+  ('Hamilton','Jennings','1992-11-20','07302356586','jenningshamilton@outlook.net','53','Washington Pastures','Berkshire','FX2Z 7WF',2,2,'2021-29-24','2021-09-17'),
+  ('Fitzgerald','Villarreal','1958-06-12','07665131619','villarreal.fitzgerald@yahoo.couk','67','Redhill Copse','Sutherland','CO4E 0UU',4,9,'2020-35-9','2021-17-18'),
+  ('Tad','Benjamin','1962-02-26','07488634069','btad8285@google.org','89','Deans Garden','Midlothian','O6 1AV',4,7,'2020-14-21','2021-05-29'),
+  ('Neil','Barr','1981-07-9','07787735225','bneil@google.org','29','Woodville Brook','Merionethshire','SR9 2UE',3,3,'2021-51-12','2021-02-31'),
+  ('Phoebe','Robertson','1964-04-25','07047620667','p_robertson6712@yahoo.net','61','Moorhouse Grange','Fife','LQ6 6FF',4,5,'2021-56-12','2021-24-11'),
+  ('Orson','Wilcox','1948-05-27','02781181184','orsonwilcox1140@aol.couk','61','Thornfield Parade','Caithness','KT1 4UJ',4,8,'2020-12-29','2021-38-11'),
+  ('Dawn','Myers','1954-09-18','02591482517','dawn_myers@icloud.net','17','Tamar Way','Renfrewshire','Y4 4AE',3,8,'2020-25-14','2021-28-2'),
+  ('Stacy','Mills','1977-10-28','02755272642','stacy_mills9180@aol.couk','12','Thompson Strand','Shropshire','GA0 5XR',4,2,'2020-35-7','2021-02-9'),
+  ('Emmanuel','Poole','1998-04-7','07986118615','p-emmanuel@protonmail.net','29','Beaumont Willows','Bedfordshire','J8C 0LC',4,12,'2020-48-27','2021-55-23'),
+  ('Darius','Chaney','1999-10-16','07434887041','chaney-darius7195@hotmail.org','7','Deer Park Garden','Shropshire','DY4 3YO',2,9,'2020-38-16','2021-21-15');
+
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES
+  ('Cathleen','Lynn','1989-10-17','02426760826','c-lynn@icloud.com','79','Laurel Acre','Kinross-shire','L8S 4MR',4,12,'2021-41-19','2021-59-26'),
+  ('Wallace','Francis','1983-07-29','07209473745','francis_wallace@hotmail.ca','89','Broughton Isaf','Oxfordshire','X27 3LJ',4,3,'2020-17-5','2021-05-15'),
+  ('Dean','Hess','1961-07-24','02263564826','d_hess@aol.ca','31','Moorhouse Grange','Denbighshire','EX10 1OG',3,11,'2020-37-7','2021-56-21'),
+  ('Pascale','Kline','1983-04-6','07236306189','k-pascale@google.net','14','Washington Pastures','Nairnshire','R5 8GC',4,4,'2020-19-15','2021-45-7'),
+  ('Julie','Haynes','1969-03-20','02449503259','j.haynes@aol.org','43','Cheshire Parkway','Devon','DR9G 5SH',4,12,'2021-15-29','2021-38-22'),
+  ('Larissa','Sims','1954-11-28','02627919688','l-sims9788@hotmail.com','45','Deer Park Garden','Derbyshire','SX9K 8OK',2,12,'2020-09-4','2021-15-3'),
+  ('Magee','Cantrell','1971-03-18','07426505854','c-magee@google.com','43','Bower Hawthorns','Dunbartonshire','WD3 2IU',2,12,'2021-48-13','2021-07-11'),
+  ('Lucian','Williamson','1989-02-11','07711825633','williamson.lucian4806@google.com','99','Denecroft','Westmorland','O6F 7RJ',4,11,'2020-05-25','2021-11-26'),
+  ('Dante','Hudson','1987-07-2','02080133887','dante.hudson@protonmail.couk','2','Washington Pastures','Yorkshire','Z9 8BD',3,12,'2020-55-28','2022-27-2'),
+  ('Jayme','Gonzales','1984-05-25','07045424833','gonzales-jayme@google.ca','73','Lock Crest','Flintshire','CD4M 4RI',2,4,'2020-14-12','2021-04-6');
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES
+  ('Tatiana','Waller','1990-03-19','07716863481','waller.tatiana1884@google.org','3','Grampian Lane','Shetland','YV3C 4FP',3,10,'2020-33-6','2021-04-15'),
+  ('Bradley','Mcneil','1986-08-26','02778751582','bradley-mcneil7264@aol.ca','2','Junction Ridge','Cardiganshire','I1H 3FE',2,3,'2020-47-19','2021-27-17'),
+  ('Cadman','Cash','1994-04-29','07354317784','c-cash@protonmail.com','79','Ffordd Tresaith','Leicestershire','I6Z 6NH',5,2,'2020-53-21','2021-19-1'),
+  ('Adrian','Torres','1950-04-8','07844336672','tadrian3914@google.ca','45','Washington Pastures','Somerset','OM42 3EH',1,4,'2020-47-15','2021-34-26'),
+  ('Maggy','Gutierrez','1982-10-29','02714077796','g-maggy@hotmail.net','79','Berkeley Road','Orkney','X3T 2FI',1,10,'2020-19-10','2021-45-19'),
+  ('Claudia','Paul','1999-01-11','02687877325','pclaudia@icloud.com','82','Milton Street','Inverness-shire','U1 1LN',4,3,'2021-19-31','2021-46-24'),
+  ('Ramona','Steele','1996-09-19','02783367173','rsteele@yahoo.com','4','Argyll Glen','Orkney','T2 5CQ',4,4,'2020-29-4','2021-57-10'),
+  ('Tatyana','Swanson','1991-03-16','02595233052','t_swanson@protonmail.couk','47','Great Glass','Huntingdonshire','FR2J 6KY',5,2,'2021-28-4','2021-42-11'),
+  ('Gary','Mccall','1978-04-1','02345339275','mccallgary7104@protonmail.org','89','Ferndown Court','Midlothian','N3O 6EA',4,12,'2021-18-9','2021-54-5'),
+  ('Benedict','Walsh','1983-03-24','07174628656','walshbenedict9686@hotmail.ca','1','Ffordd Tresaith','Staffordshire','B0 8OV',2,12,'2020-08-7','2021-09-25');
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES    
+  ('Meghan','Frost','1949-01-26','07953395865','fmeghan135@aol.couk','5','Junction Ridge','Lancashire','A2Z 7FH',2,2,'2020-29-30','2021-39-21'),
+  ('Lance','Glover','1987-11-2','02091569544','l-glover@icloud.couk','81','Derwent Wharf','Sussex','I08 4EV',4,11,'2020-43-15','2021-36-12'),
+  ('Olivia','Wilkinson','1970-11-23','07461677692','owilkinson@google.ca','83','Glover Paddocks','Brecknockshire','H2Q 8EF',3,4,'2021-23-15','2021-54-6'),
+  ('Cairo','Young','1964-09-30','02279234532','c.young8465@icloud.couk','13','Grampian Lane','Dorset','ES96 2ZH',2,2,'2021-14-5','2021-16-13'),
+  ('Margaret','Shannon','1959-05-26','02335733122','margaretshannon5504@google.org','55','Amber Cross','Cardiganshire','RO72 9XV',3,1,'2021-16-17','2021-02-4'),
+  ('Drew','Stuart','1972-02-16','02077587893','d_stuart4924@google.couk','13','Ullswater Crest','Huntingdonshire','P3 9CG',5,8,'2020-46-14','2021-07-12'),
+  ('Demetrius','Burns','1969-08-23','07141653775','demetrius-burns@google.couk','23','Old Park Banks','Renfrewshire','VX68 1UW',4,6,'2020-27-2','2021-13-31'),
+  ('Urielle','Simmons','1965-09-12','07085552477','usimmons@outlook.org','1','Argyll Glen','Berwickshire','C2J 6FS',1,4,'2020-21-27','2021-17-11'),
+  ('Hilary','Fernandez','1961-04-7','07756037462','fernandezhilary2119@google.org','81','Junction Ridge','Anglesey','Z86 3CR',2,6,'2021-47-7','2021-56-21'),
+  ('Patrick','Jefferson','1983-11-12','02542337758','p.jefferson@google.com','45','Junction Ridge','Lincolnshire','OM22 9HO',2,3,'2020-05-12','2021-43-1');
+
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES  
+  ('Wylie','Moon','1958-07-7','07856335241','m-wylie@protonmail.couk','55','Fleming Newydd','Orkney','F2C 5LP',5,11,'2020-56-22','2021-26-16'),
+  ('Herman','Hartman','1996-04-3','02698223242','h.hartman@aol.net','73','Redhill Copse','Dorset','KT8B 3MT',5,7,'2020-37-7','2021-19-24'),
+  ('Carson','Snider','1991-10-11','07435128942','snider_carson8283@google.net','73','Thornfield Parade','Wiltshire','C8 2WJ',4,9,'2020-40-26','2021-33-22'),
+  ('Vanna','Patterson','1973-05-6','02250642026','patterson_vanna@yahoo.couk','37',' Hillside Wood','Pembrokeshire','H79 7WL',4,7,'2020-40-12','2021-35-15'),
+  ('Mohammad','Ayala','1984-10-7','02684010896','mohammad-ayala4807@protonmail.couk','65','Redhill Copse','Derbyshire','YY7 6EV',1,11,'2020-38-9','2021-23-4'),
+  ('Armand','Wilkins','1996-03-1','07202243317','w-armand1323@hotmail.org','3','Westbourne Cloisters','Wiltshire','TV38 3XP',1,11,'2020-32-7','2021-37-24'),
+  ('Ann','Leon','1949-01-1','02814290758','lann@aol.org','11','Tamar Way','Suffolk','D1P 7LT',4,6,'2021-31-20','2021-49-26'),
+  ('Mark','Guzman','1995-03-18','02377541253','guzman-mark@protonmail.com','1','Ffordd Tresaith','Lanarkshire','N43 2HB',3,11,'2020-20-16','2021-02-13'),
+  ('Nicole','Herring','1973-05-25','07854399446','herring-nicole6148@protonmail.org','82',' Hillside Wood','East Lothian','E42 8IR',3,9,'2021-12-23','2021-10-26'),
+  ('Whitney','England','1949-03-23','07191336474','whitneyengland@yahoo.couk','60','Moorhouse Grange','Caithness','W1R 1QO',3,9,'2020-47-14','2021-02-25');
+
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES  
+  ('Calvin','Avery','1989-06-21','02597721916','c-avery@yahoo.org','35','Junction Ridge','Worcestershire','EK8 3JG',5,5,'2020-22-26','2021-28-19'),
+  ('Yen','Berg','1951-05-4','02537079179','yberg@google.net','59','Hay Place','Morayshire','OO1 0JJ',5,12,'2020-08-7','2021-35-20'),
+  ('Donovan','Phelps','1964-04-5','07004914458','phelpsdonovan9957@aol.ca','59','Cheshire Parkway','Somerset','V7 5PC',2,7,'2020-00-13','2021-30-2'),
+  ('Drake','Russo','1993-12-25','07435068818','russo.drake5892@aol.com','1','Woodbine Gait','Shetland','N9 1PO',4,12,'2021-57-15','2021-41-18'),
+  ('Emily','Riggs','1984-08-30','07685054450','riggs_emily224@aol.com','31','Junction Ridge','Devon','ID9P 5UW',1,12,'2020-56-28','2021-36-29'),
+  ('Tashya','Daniels','1991-08-24','07719158710','tashyadaniels3857@aol.com','61','Marlborough Grove','Anglesey','LB59 5NS',3,11,'2020-25-27','2021-44-18'),
+  ('Guinevere','Colon','1975-03-31','02028259362','g_colon3723@aol.ca','1','Hengistbury Road','Dumfriesshire','R8 1SX',3,6,'2020-05-30','2021-01-22'),
+  ('Amber','Dunlap','1957-11-21','07721566288','amber_dunlap@aol.couk','31','Glebe Wharf','Gloucestershire','I11 8VQ',4,7,'2020-13-16','2021-51-2'),
+  ('Mallory','Graves','1995-01-6','02833555838','mallory.graves@outlook.ca','1','Stewart Side','Cardiganshire','FX8K 5SL',5,3,'2020-10-28','2021-24-3'),
+  ('Jermaine','Conrad','1974-10-19','02627233210','conrad.jermaine@aol.org','19','Westmorland Vale','Derbyshire','R1 6LO',2,2,'2020-14-2','2021-23-27');
+
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+    patient_discharged) VALUES  
+  ('Rigel','Garcia','1953-12-6','02617268166','rgarcia2212@google.org','1','Moorhouse Grange','Dorset','T8U 2BW',5,9,'2021-06-8','2021-26-11'),
+  ('Erica','Alford','1989-04-3','07998871186','alford.erica2939@yahoo.net','81','Rhodes Street','Leicestershire','MZ1 5IB',3,10,'2020-40-21','2021-56-20'),
+  ('Paki','Charles','1996-02-14','07466327706','p_charles@yahoo.ca','75','John Day Close','Durham','JO2L 4UI',3,13,'2021-52-9','2021-04-10'),
+  ('Isaac','White','1964-05-4','07143185455','iwhite3389@hotmail.net','4','Beaumont Willows','Cambridgeshire','J1K 6RF',4,9,'2020-26-1','2021-50-25'),
+  ('Benedict','Griffith','1971-02-21','07750831173','b-griffith@protonmail.ca','53','Woodville Brook','Kinross-shire','D4 5ML',3,11,'2021-03-8','2021-40-2'),
+  ('Brady','Santana','1996-07-25','02153145321','b_santana9800@outlook.couk','43','Old Park Banks','Kinross-shire','S8 4QJ',4,9,'2021-40-24','2021-54-26'),
+  ('Zachary','Griffin','1999-06-30','02549584168','z_griffin@icloud.ca','61','Hay Place','Leicestershire','Z5H 6PT',4,7,'2020-40-6','2021-35-5'),
+  ('Elvis','Rosales','1950-03-25','07234444030','r-elvis1164@hotmail.couk','82','Woodbine Gait','Durham','M6B 9DM',2,11,'2020-08-15','2021-45-28'),
+  ('Wade','Farley','1956-07-23','02716996679','w.farley1994@hotmail.ca','82','Old Park Banks','Buckinghamshire','YW25 8JV',2,6,'2021-49-17','2021-40-8'),
+  ('Shaine','Potter','1984-05-15','02385789504','potter_shaine5708@google.org','5','Laurel Acre','Denbighshire','G5E 1JE',2,12,'2021-52-31','2022-39-11');
 
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Jennifer','Deleon','1988-6-30','7326302652','augue.sed@aol.net','62','Adam Crest','Nairnshire','SN24 5EG',2,20),
-  ('Gretchen','Blair','1983-4-25','7932038426','ac.libero.nec@google.edu','13','Brockley Wynd','Dorset','B9 2PE',2,25),
-  ('Cassandra','Guerra','1979-2-2','7657179676','mollis.dui@aol.edu','45','Anchorage Way','Northumberland','X5P 4VE',3,21),
-  ('Germane','Guy','1969-2-9','7291914016','ipsum.ac@outlook.ca','64','Tudor Hills','Kinross-shire','E14 1VE',3,32),
-  ('Jordan','Malone','1998-8-13','7677266519','cursus.et.magna@outlook.couk','41','Greyfriars Hills','Dorset','QB8L 5NP',3,21),
-  ('Justin','Holman','1971-6-18','7083748537','adipiscing.mauris.molestie@hotmail.net','33','Furness Paddock','Cornwall','DT1 7MZ',2,24),
-  ('Axel','Bell','1989-9-17','7360768240','mus@icloud.ca','31','Carver Lane','Kincardineshire','X8P 5KS',3,22),
-  ('Emma','Casey','1971-6-5','7374180616','rhoncus.nullam@protonmail.edu','44','Anchorage Way','Derbyshire','T54 4PT',3,20),
-  ('Tiger','Joyner','1995-12-20','7515827179','penatibus.et@google.com','19','Carver Lane','Monmouthshire','C80 5XO',4,22),
-  ('Leslie','Coleman','1991-1-25','7271272556','eu.arcu.morbi@aol.edu','81','Parkland Retreat','Lanarkshire','VU95 0UD',3,24);
-
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Hedda','Castro','1982-2-14','7823788266','arcu.nunc@hotmail.org','17','Farriers Elms','Orkney','D7 7JR',5,20),
-  ('Salvador','Wilkerson','1985-2-25','7898537848','gravida.molestie@hotmail.com','91',' Belvoir Leaze','Angus','C3M 4QO',5,19),
-  ('Shad','Gordon','1996-6-12','7492482800','eleifend.egestas.sed@outlook.net','45','Brick Holt','Monmouthshire','Y95 7AQ',3,24),
-  ('Lysandra','Preston','1987-4-9','7505075661','convallis.est@protonmail.com','5','Ashton Paddock','Dunbartonshire','PD5 9UQ',3,22),
-  ('Paula','Lee','1971-4-26','7275617866','lorem.vitae@hotmail.com','23','Tudor Hills','Buteshire','F16 9KE',1,28),
-  ('Autumn','Ashley','1984-12-11','7495457531','metus.vitae@icloud.org','11','St Johns Banks','Norfolk','Q4S 0EF',2,26),
-  ('Aurelia','Barton','1996-6-18','7185405324','neque.tellus@outlook.ca','23','Limes Retreat','Bedfordshire','X1N 0FY',2,21),
-  ('Shannon','Dalton','1984-9-27','7880851743','iaculis.enim@outlook.net','46','Ball Street','Kent','X9 0OB',1,19),
-  ('Zelda','Witt','1984-8-17','7177657916','leo.elementum@hotmail.couk','32','Weavers Holt','Midlothian','TV8B 8XP',5,28),
-  ('Alika','Brock','1990-5-30','7877663624','malesuada.fames@outlook.ca','55',' Belvoir Leaze','Pembrokeshire','Q8 8OC',1,20);
 
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Aphrodite','Garcia','1992-7-24','7255613553','pellentesque.habitant@outlook.net','64','Parkland Retreat','East Lothian','TE6 6WJ',4,20),
-  ('Wesley','Holland','1994-4-30','7340024935','donec.egestas@google.ca','26','Townsend Links','Selkirkshire','CW0W 9RQ',4,26),
-  ('Orli','Norton','1982-6-19','7977153916','habitant.morbi@aol.couk','41','Adam Crest','Devon','CL4D 4EX',4,28),
-  ('Byron','Foster','1975-9-20','7713265871','pede.et.risus@icloud.org','62',' Alice Row','Gloucestershire','X59 6DK',2,21),
-  ('Jenna','Aguilar','1972-10-8','7553728507','sed.auctor@google.couk','19','Oakley Woodlands','Worcestershire','E7 6TE',4,20),
-  ('Rashad','Stout','1993-7-28','7888859167','tellus.non@hotmail.com','32','Ben Bhraggie Drive','Orkney','LY38 2ZF',1,27),
-  ('Beatrice','Trevino','1985-10-27','7465435016','iaculis.enim.sit@outlook.com','61','Carrsides Lane','Cardiganshire','Z15 8RL',3,21),
-  ('Alexa','Boyle','1991-9-14','7771983383','pede.praesent@aol.com','42','Winifred Drive','Montgomeryshire','T1G 1FO',1,23),
-  ('Quynn','Porter','1985-3-2','7168016159','torquent.per.conubia@hotmail.edu','17','Townsend Links','Dumfriesshire','L9 7HI',5,28),
-  ('Jasper','Merritt','1992-10-1','7276726718','sit.amet.metus@protonmail.couk','13','Kingfisher Pleasant','Inverness-shire','H0T 3VK',2,19);
 
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Chancellor','Giles','1980-3-29','7968773702','ultrices.posuere.cubilia@icloud.couk','81','Ball Street','Kincardineshire','KR5 6YG',4,21),
-  ('Halla','Puckett','1988-9-2','7952143886','sapien.molestie.orci@google.edu','99','Limes Retreat','Pembrokeshire','R5 7QE',1,28),
-  ('Naomi','Hansen','1975-8-28','7481919239','aliquam@outlook.com','81','Cartmel Manor','Bedfordshire','DV85 7EE',1,19),
-  ('Gisela','Durham','1982-4-21','7886436215','ultricies@google.org','96','Ashton Paddock','Gloucestershire','VO3 0OV',4,19),
-  ('Wallace','Donaldson','1980-12-27','7557606661','ridiculus.mus@aol.ca','13','Furness Paddock','Durham','YS8 7FJ',1,22),
-  ('Kaye','Mcclain','1986-12-4','7803945631','ridiculus.mus.proin@yahoo.couk','44','Sidney Hey','Caithness','J78 6EI',2,25),
-  ('Keith','Moses','1982-11-26','7615685644','congue@protonmail.net','19','Brampton Brow','Denbighshire','HN7 8TO',3,28),
-  ('Bruno','Ramos','1992-11-21','7663288748','vulputate@hotmail.edu','19','Mortimer Glebe','Sussex','L1M 8WK',2,21),
-  ('Elmo','Valentine','1982-5-25','7276316489','nonummy.fusce@icloud.com','35','Strawberry Isaf','Kent','SJ7Q 3YL',3,21),
-  ('Caryn','Stokes','1998-7-4','7144683272','at.libero.morbi@icloud.ca','46','St Johns Banks','Nottinghamshire','E1W 3YX',3,20);
-
-
-  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Kane','Guerrero','1992-6-22','7563879661','senectus.et.netus@aol.com','70','Townsend Links','Lanarkshire','Q34 6BX',3,26),
-  ('Lucas','Wright','1982-3-23','7698423048','metus@icloud.edu','48','Willow Glas','Merionethshire','GD34 1MT',3,22),
-  ('Mona','Anthony','1977-2-10','7686240607','elit.pede@outlook.edu','65','Allen Knoll','Aberdeenshire','E1 8CT',4,22),
-  ('Allistair','Morgan','1989-11-21','7156841577','velit.justo.nec@google.couk','30','Adam Crest','Surrey','SW5 0BV',1,19),
-  ('Rigel','Lindsay','1999-8-2','7231992763','nibh.dolor@aol.net','40',' Alice Row','Sutherland','PC44 6PN',1,21),
-  ('Meredith','Gomez','1995-7-22','7450163178','in.faucibus@hotmail.edu','22','Perkins Square','Roxburghshire','K7D 3MK',1,24),
-  ('Lara','Lyons','1998-1-31','7987131545','iaculis@icloud.net','44','Winifred Drive','Inverness-shire','G5 8SS',1,21),
-  ('Zeph','Castro','1986-6-15','7265188630','ultricies@outlook.com','47','Perkins Square','Devon','I7C 1GL',3,20),
-  ('Avram','Rios','1971-4-4','7761328467','sem.egestas@icloud.couk','43','St Leonards Woodlands','Buteshire','P7B 8MD',5,21),
-  ('Emma','Richards','1984-10-23','7450977557','tellus.id.nunc@yahoo.couk','19','Holbrook Loke','Morayshire','VF5J 1LI',4,21);
-
--- up to here
-  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Desiree','Ratliff','1993-4-11','7119118421','gravida.aliquam@aol.ca','64','Brampton Brow','Essex','VU03 5XW',2,19),
-  ('Tucker','Bowman','1984-7-9','7633584345','pede.praesent@yahoo.com','23',' Alice Row','East Lothian','I43 2JB',1,20),
-  ('Alexis','Lambert','1997-1-5','7843875577','litora.torquent@protonmail.couk','63','Willow Glas','Kirkcudbrightshire','OC8 5CI',3,24),
-  ('Robert','Stanley','1988-4-15','7832989536','sed@protonmail.edu','82','Winifred Drive','Monmouthshire','HA6J 4MP',5,21),
-  ('Colt','Duke','1969-12-6','7951865165','pellentesque.a@yahoo.com','44','Furness Paddock','Fife','PY7 9QB',1,28),
-  ('Sylvia','Jacobs','1977-6-25','7441526526','vitae@yahoo.ca','26','Strawberry Isaf','Northamptonshire','R29 2ZJ',5,21),
-  ('Davis','Huffman','1979-3-19','7206435472','quisque.fringilla@icloud.couk','9','Burnham Wood','Cheshire','DO7M 5XI',3,19),
-  ('Anastasia','Hopkins','1997-8-20','7815134579','porta.elit@google.couk','67','Cartmel Manor','Wiltshire','U81 1PP',3,19),
-  ('Thane','West','1991-3-13','7844688501','euismod.mauris@aol.org','69','Ben Bhraggie Drive','Wigtownshire','ZL15 3YV',2,21),
-  ('Kasper','Obrien','1981-12-9','7286663346','nisi.cum@hotmail.edu','22','Tudor Hills','Lancashire','G44 4JJ',3,25);
-
-  INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward) VALUES
-  ('Camden','Mathis','1997-11-12','7888826011','aliquet.diam@outlook.com','62','Winifred Drive','Fife','WO15 3ZY',4,23),
-  ('Jacqueline','Day','1974-5-8','7305841752','felis@aol.couk','83','Sidney Hey','Banffshire','DP6G 7EJ',4,19),
-  ('Judah','Maldonado','1990-1-13','7103961866','lorem.sit@protonmail.couk','48','Tudor Hills','Pembrokeshire','XR2 4VW',5,20),
-  ('Quyn','Rios','1976-10-21','7387768021','iaculis.aliquet@outlook.couk','1','St Leonards Woodlands','Argyllshire','WW3X 4QB',1, 21),
-  ('Madison','Mccray','1997-5-2','7477521389','dolor.fusce.mi@hotmail.org','9','Old Glebe','Midlothian','X4 4XQ',2,26),
-  ('Veda','Perkins','1993-12-23','7411439264','sed@aol.ca','99','Church Farm Retreat','Cornwall','GI6 8RG',2, 24),
-  ('Channing','Chambers','1983-6-1','7573441639','nibh@aol.net','11','Anchorage Way','Kent','X53 2RA',2, 20),
-  ('Olympia','Mccormick','1991-4-3','7578674018','nisi.a@aol.edu','40','St Johns Banks','Cardiganshire','R0N 4SZ',2,19),
-  ('Upton','Ortiz','1969-1-17','7953570667','iaculis@outlook.net','67','Parkland Retreat','Lincolnshire','AX49 7ZT',3, 22),
-  ('Aimee','Maddox','1976-1-23','7816878591','tincidunt.aliquam.arcu@icloud.org','68','Heaton Copse','Wigtownshire','L2 3CO',2,22);
-
--- PLEASE NO MORE PATIENTS
-
-INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email, staff_add1, staff_add2, staff_county, staff_postcode) VALUES
- ("Hoyt","Steele","13-08-1950","076 7525 2458","sed.eu.nibh@yahoo.net","32"," Rock Lawns","Dumfriesshire","SI73 9WH"),
-  ("Belle","Mclaughlin","16-04-1975","0845 46 41","ut@protonmail.edu","32","Ladywell Hills","Clackmannanshire","AB68 7MR"),
-  ("Kaitlin","Simon","05-07-1967","0845 46 43","mauris.quis@protonmail.org","86","Saddlers Meadows","Inverness-shire","RX3 0VF"),
-  ("Vielka","Haney","03-07-1963","(027) 1149 1724","montes.nascetur@aol.net","49","Ladywell Hills","Glamorgan","DT6 8PO"),
-  ("Cedric","Alford","02-05-1957","07872 518810","eu.erat.semper@outlook.com","65","Sandhurst Grove","Argyllshire","I52 4ES"),
-
-  ("Levi","Morrow","13-06-1962","0938 286 3391","ultricies.dignissim@icloud.net","37"," Peel Avenue","Merionethshire","X0 7HG"),
-  ("Nathaniel","Vazquez","25-02-1984","056 0635 1957","non.nisi@google.org","45","Wheatsheaf Fairway","Lanarkshire","G4R 6TN"),
-  ("Edan","Dennis","21-04-1963","07624 019640","non.justo.proin@icloud.edu","34","Melrose Cliff","Argyllshire","V6 5RK"),
-  ("Tyrone","Fisher","04-11-1978","(01215) 26372","sed@protonmail.org","25","Raven Brae","Denbighshire","J2 6OR"),
-  ("Garrison","Gallagher","20-09-1990","(01567) 12654","tellus.sem.mollis@outlook.couk","13","Raven Brae","Herefordshire","K33 8RJ"),
-
-  ("Chase","Duran","01-04-1971","07553 131725","natoque@hotmail.org","74","Saddlers Meadows","Kinross-shire","RK3I 8GE"),
-  ("Fleur","Jefferson","27-07-1999","(0151) 407 8704","cras.eu.tellus@hotmail.com","32","Spinney Passage","Kincardineshire","J4 6DR"),
-  ("Jason","Mays","24-07-1961","(0161) 895 1135","consectetuer@google.edu","28","Waltham Courtyard","Dorset","NL03 3SV"),
-  ("Kenneth","Nixon","31-01-1959","0353 873 2383","dictum@aol.couk","79"," Ringwood Mews","Dumfriesshire","VV18 9NH"),
-  ("Desirae","Welch","22-02-1986","(020) 8179 6547","ac.ipsum@protonmail.couk","87","Stuart Dell","Midlothian","OT3 7FU"),
---24
-  ("Alan","Ware","29-05-1962","0800 981147","non.arcu@outlook.org","24","Brackenlea","Renfrewshire","FB3M 6HY"),
-  ("Melvin","Melton","20-11-1980","056 7474 2773","nullam.suscipit@aol.edu","31","Brookhouse Woods","Inverness-shire","HY78 6JW"),
-  ("Yeo","Potter","20-10-1996","(016977) 5546","eu.metus@icloud.couk","27","Nicholson Rise","Lanarkshire","YC6 8IS"),
-  ("Rashad","Rush","03-09-1962","056 2187 1803","cum.sociis@icloud.couk","47","Howden Lodge","Westmorland","VD1 3YP"),
-  ("Jacob","Velez","01-09-1985","070 1811 6623","diam.pellentesque@hotmail.edu","27","Sandhurst Grove","Kent","BV2 4MB"),
-
- -  ("Thomas","Shields","15-06-1984","(01676) 146149","sed.nec.metus@outlook.ca","76","Post Office Village","Gloucestershire","A6 7UP"),
-  ("Nero","Marshall","23-03-1967","0845 46 48","orci@google.edu","52","Seaview Road","Ayrshire","JL8 4YO"),
-  ("Libby","Higgins","27-02-1984","056 1164 7282","arcu@outlook.net","50","Dawson Ridge","Aberdeenshire","DL9J 5OO"),
-  ("Freya","Doyle","05-04-1974","0845 46 44","dictum.sapien@protonmail.ca","97","Dundee Terrace","Wiltshire","R57 3UU"),
-  ("Hadassah","Miranda","29-03-1979","0397 874 6865","sed.congue@icloud.edu","39","Stone Court","Banffshire","O83 2XR"),
-
-    ("Carlos","Manning","23-12-1996","0800 1111","cum.sociis@yahoo.couk","77","Shapwick Road","Lancashire","MG53 9UG"),
-  ("Magee","Logan","05-05-1984","(01767) 422465","pede.blandit.congue@aol.edu","73","Brookhouse Woods","Banffshire","V1 3WJ"),
-  ("Kelsey","Benton","05-08-1969","(016977) 1583","nulla@yahoo.couk","91","Nicholson Rise","Gloucestershire","O34 0NU"),
-  ("Ann","Shepherd","23-08-1969","0800 1111","varius.nam@yahoo.net","51","Stone Court","Pembrokeshire","G7U 3SD"),
-  ("Anika","Barr","01-07-1963","0500 224625","ante.dictum@hotmail.org","74","Howden Lodge","Yorkshire","G8 0VQ");
 
   INSERT INTO staff_nurse (nurse_id, is_head_nurse, nurse_ward)
 VALUES
