@@ -13,9 +13,10 @@
 -- DTS date (Date Treatment Started)
 -- DTE date (Date Treatment Ended)
 
-SELECT patient.patient_fname ,patient.patient_lname, patient_dob, gp_name, gp_add1, gp_add2, treatment_desc, treatment_start, treatment_end from patient
+SELECT patient.patient_fname ,patient.patient_lname, patient_dob, gp_name, gp_add1, gp_add2, complaint_desc, treatment_desc, treatment_start, treatment_end from patient
 JOIN general_practitioner ON patient.patient_gp = general_practitioner.gp_id
 JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
+JOIN complaint ON complaint.complaint_id = patient_complaint.complaint_id
 JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
 JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
 
