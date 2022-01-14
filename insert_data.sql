@@ -180,16 +180,16 @@ INSERT INTO doctor_treatment (doctor_id, treatment_id) VALUES
 -- combo key (of patient id, complaint id), and comments
 -- This works but same as above, we have no official primary key
 INSERT INTO patient_complaint (patient_id, complaint_id, pat_com_comments) VALUES
-    (10, 1, 'Discharged'),
-    (11, 2, 'Treated'),
-    (14, 2, 'In treatment'),
-    (16, 3, 'In treatment'),
-    (15, 4, 'Discharged'),
-    (12, 5, 'Discharged'),
-    (23, 6, 'Referred externally'),
-    (16, 7, 'Discharged'),
-    (21, 8, 'preparing treatment'),
-    (23, 1, 'Discharged');
+    (3, 1, 'Discharged'),
+    (5, 2, 'Treated'),
+    (4, 2, 'In treatment'),
+    (6, 3, 'In treatment'),
+    (1, 4, 'Discharged'),
+    (2, 5, 'Discharged'),
+    (7, 6, 'Referred externally');
+    -- (16, 7, 'Discharged'),
+    -- (21, 8, 'preparing treatment'),
+    -- (23, 1, 'Discharged');
 
 
 
