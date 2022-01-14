@@ -81,7 +81,9 @@ CREATE TABLE patient (
     patient_postcode VARCHAR(8) NOT NULL,
     patient_gp INT REFERENCES general_practitioner(gp_id) NOT NULL,
     patient_ward INT REFERENCES ward(ward_id) NOT NULL,
-    patient_comments VARCHAR(200)
+    patient_comments VARCHAR(200),
+    patient_admitted DATE NOT NULL,
+    patient_discharged DATE
 );
 
 CREATE TABLE doctor_treatment (
