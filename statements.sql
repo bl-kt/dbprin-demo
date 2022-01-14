@@ -32,7 +32,8 @@ JOIN ward ON patient.patient_ward = ward.ward_id
 JOIN ward_speciality ON ward.ward_speciality = ward_speciality.speciality_id
 JOIN staff_nurse ON staff_nurse.nurse_ward = ward.ward_id
 JOIN staff ON staff.staff_id = staff_nurse.nurse_id
-ORDER BY ward_name;
+ORDER BY treatment_start
+LIMIT 10;
 -- need to do a joint on gp name and patient.
 
 -- which patient has left as a sql query
