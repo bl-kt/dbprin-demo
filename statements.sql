@@ -13,14 +13,14 @@
 -- DTS date (Date Treatment Started)
 -- DTE date (Date Treatment Ended)
 
-SELECT CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name", patient_dob, gp_name, gp_add1, gp_add2, complaint_desc, treatment_desc, treatment_start, treatment_end from patient
-JOIN general_practitioner ON patient.patient_gp = general_practitioner.gp_id
-JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
+-- SELECT CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name", patient_dob, gp_name, gp_add1, gp_add2, complaint_desc, treatment_desc, treatment_start, treatment_end from patient
+-- JOIN general_practitioner ON patient.patient_gp = general_practitioner.gp_id
+-- JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
 -- JOIN staff ON 
--- we need to have the hospital doctor treating the patient
-JOIN complaint ON complaint.complaint_id = patient_complaint.complaint_id
-JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
-JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
+-- -- we need to have the hospital doctor treating the patient
+-- JOIN complaint ON complaint.complaint_id = patient_complaint.complaint_id
+-- JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
+-- JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
 
 -- dont know what to do next lol
 SELECT ward_name, ward_speciality, CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name", CONCAT(staff_fname, ' ', staff_lname) AS "Nurses", is_head_nurse, gp_name, treatment_start FROM patient
@@ -70,11 +70,6 @@ JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id
 JOIN staff_doctor ON doctor_treatment.treatment_id = staff_doctor.doctor_id
 JOIN staff on staff.staff_id =  staff_doctor.doctor_id;
 
-<<<<<<< HEAD
-SELECT patient_fname, patient_lname, gp_name from patient
-JOIN general_practitioner ON patient_gp = GP_id;
-
-=======
 -- Which patients are being treated by a particular doctor - E.g. if a doctor is off sick and patients 
 -- need to be allocated to new doctors. Is this too simple? holly working on this 
 SELECT p.patient_id AS "Patient ID", CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name", p.patient_ward AS "Ward", p.patient_comments AS "Comments", c.complaint_desc AS "Complaint", t.treatment_id AS "Treatment ID", t.treatment_desc AS  "Treatment", dt.doctor_id AS "Doctor Name"
@@ -85,4 +80,3 @@ JOIN treatment t ON  pc.complaint_id = t.complaint_no
 JOIN doctor_treatment dt ON t.treatment_id = dt.treatment_id
 JOIN staff_doctor sd ON dt.doctor_id = sd.doctor_id
 WHERE sd.doctor_id = '2';
->>>>>>> 06db05a75308d07eec088ed86cbb6106feecb8a7
