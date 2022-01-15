@@ -9,7 +9,7 @@ VALUES
   ('Michelle','Huffman','1998-04-18','02885165062','huffman@protonmail.com','5','Sandringham Road','Shropshire','HJ0Y 3XX'),
   ('Mona','Woodard','1988-07-07','02314603879','woodard6635@outlook.edu','72','Lodge Close','Carmarthenshire','OF6B 9NV'),
   ('Katell','Haney','1988-11-02','02455676313','haney@google.com','5','Birch Close','Pembrokeshire','Z8Y 6EG'),
-  ('Remedios','Frederick','2000-10-30','07252497557','frederick@google.com','94','Swallow Close','Ayrshire','Z55 6CR');
+  ('Remedios','Frederick','2000-10-30','07252497557','frederick@google.com','94','Swallow Close','Ayrshire','Z55 6CR'),
   ('Gavin','Best','1984-04-07','07422182822','best9232@outlook.edu','27','Wilson Road','Cumberland','GP16 6VM'),
   ('Audrey','Lynch','1988-05-30','02825818632','lynch@google.edu','39','The Hollies','Huntingdonshire','O1J 9DD'),
   ('Joel','Landry','1989-04-03','07367667093','landry1237@aol.com','20','Fern Close','Bedfordshire','K8 2LI'),
@@ -19,7 +19,7 @@ VALUES
   ('Aspen','Barker','1969-08-13','07525533258','barker8039@yahoo.com','7','Hampton Road','Pembrokeshire','PF1 1WM'),
   ('Suki','Dale','1989-07-09','02172133011','dale@yahoo.couk','19','Francis Road','Angus','U4 8HW'),
   ('Nero','Alvarez','1963-07-18','02713678526','alvarez7841@icloud.net','19','Sussex Road','Cheshire','EN7 1OD'),
-  ('Fletcher','Hendricks','1968-01-09','07142664398','hendricks@yahoo.net','40','The Hollies','Derbyshire','SI6E 3NK');
+  ('Fletcher','Hendricks','1968-01-09','07142664398','hendricks@yahoo.net','40','The Hollies','Derbyshire','SI6E 3NK'),
   ('Howard','Noel','1971-03-06','07952828634','noel4731@google.org','40','Beechwood Drive','Aberdeenshire','K8 7WY'),
   ('Natalie','Brennan','1966-07-21','02311460861','brennan@protonmail.org','50','Francis Road','Gloucestershire','WL8R 4US'),
   ('Xanthus','Winters','1982-05-04','02657724777','winters2040@outlook.org','47','Priory Close','Kincardineshire','J22 3HK'),
@@ -29,7 +29,7 @@ VALUES
   ('Fitzgerald','Curtis','1984-07-15','02660963283','curtis@icloud.org','66','Pembroke Road','Hampshire','NF77 0IN'),
   ('Gemma','Reynolds','1970-07-29','02691130633','reynolds@outlook.edu','47','School Street','Hertfordshire','C9 1JO'),
   ('Justin','Douglas','1974-10-29','02768286621','douglas158@google.org','36','Napier Road','Warwickshire','DF3B 6SY'),
-  ('Leigh','Fernandez','1969-03-21','02766487035','fernandez2091@aol.edu','31','Pembroke Road','Orkney','TU6V 9EI');
+  ('Leigh','Fernandez','1969-03-21','02766487035','fernandez2091@aol.edu','31','Pembroke Road','Orkney','TU6V 9EI'),
   ('Jasper','Castro','2001-10-05','07049089639','castro8490@protonmail.edu','4','Nelson Road','Buckinghamshire','IE1R 4JQ'),
   ('Roth','Mccullough','1993-08-25','02655393615','mccullough@outlook.net','52','Suffolk Road','Lancashire','B40 7BZ'),
   ('Daria','Douglas','1977-04-24','07763182935','douglas@google.com','21','Scott Close','Oxfordshire','U7 1GH'),

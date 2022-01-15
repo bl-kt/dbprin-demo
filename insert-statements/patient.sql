@@ -1,4 +1,4 @@
-INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_admitted,
+INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, patient_email, patient_add1, patient_add2, patient_county, patient_postcode, patient_gp, patient_ward, patient_comments, patient_admitted,
     patient_discharged) VALUES
   ('Felix','Hoffman','1971-06-26','07146957325','hoffman5897@aol.com','9','The Hollies','Banffshire','LK4D 7HJ',2,11,'sed turpis nec mauris blandit mattis. Cras eget','2021-02-14','2021-10-14'),
   ('Amaya','Levine','2000-02-09','07861187988','levine@google.com','95','Kingfisher Drive','Northumberland','YS3 1GC',1,11,'eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in','2021-02-27','2021-10-19'),
@@ -9,7 +9,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Gavin','Kramer','1992-02-26','02425168538','kramer@aol.couk','4','Kingsley Avenue','Kincardineshire','Z4O 2QL',3,11,'a, magna. Lorem ipsum dolor sit amet, consectetuer adipiscing','2020-02-19','2021-10-12'),
   ('Silas','Skinner','1994-04-16','07182183938','skinner855@outlook.ca','78','Lodge Close','Fife','NI6E 6PS',1,5,'ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed','2021-01-27','2021-07-04'),
   ('Lane','Green','1994-06-26','07506550213','green@yahoo.couk','27','Warwick Street','Merionethshire','EP10 3LH',4,13,'dui quis accumsan convallis, ante lectus convallis est,','2020-05-15','2021-09-18'),
-  ('Barrett','Goff','1980-01-11','07438341640','goff9375@yahoo.edu','20','School Street','Stirlingshire','XQ32 2HW',5,11,'arcu. Vivamus sit amet risus. Donec egestas.','2020-08-02','2021-06-06')
+  ('Barrett','Goff','1980-01-11','07438341640','goff9375@yahoo.edu','20','School Street','Stirlingshire','XQ32 2HW',5,11,'arcu. Vivamus sit amet risus. Donec egestas.','2020-08-02','2021-06-06'),
   ('Hamilton','Knapp','1994-03-03','02621762333','knapp@aol.net','15','Priory Road','Hertfordshire','G1 4CH',4,9,'Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis ac arcu. Nunc mauris. Morbi non','2020-09-13','2021-12-27'),
   ('Latifah','Richardson','1974-08-05','02364188554','richardson@protonmail.net','32','Kingsley Avenue','Wigtownshire','BH74 9DP',3,12,'pellentesque a, facilisis non, bibendum sed, est. Nunc','2020-08-01','2021-06-08'),
   ('Ryder','Mcmahon','1983-02-16','02962482844','mcmahon4044@icloud.com','39','Priory Close','Pembrokeshire','T12 4GL',4,4,'Cras dolor dolor, tempus non, lacinia at, iaculis quis, pede. Praesent','2020-04-13','2021-07-04'),
@@ -19,7 +19,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Dean','Greer','1992-04-08','07755246888','greer@outlook.edu','23','Kingsley Avenue','Leicestershire','PY5 6XG',2,8,'Aenean eget metus. In nec orci. Donec nibh. Quisque nonummy ipsum non arcu. Vivamus sit','2020-06-26','2021-09-09'),
   ('Serina','Patrick','1974-02-04','02428886876','patrick@protonmail.ca','26','Rutland Road','Staffordshire','C20 7LM',2,3,'vulputate dui, nec tempus mauris erat eget ipsum. Suspendisse sagittis. Nullam vitae','2020-03-02','2021-10-09'),
   ('Ezekiel','Rosa','1970-10-31','07987246158','rosa9577@yahoo.com','36','The Green','Sutherland','QN2 5GN',2,9,'Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis','2021-03-16','2021-11-04'),
-  ('Ryder','Nash','1983-03-20','07611007278','nash@icloud.org','94','Nelson Road','Caithness','YZ8H 5NN',5,12,'a neque. Nullam ut nisi a odio semper','2020-04-04','2021-08-08')
+  ('Ryder','Nash','1983-03-20','07611007278','nash@icloud.org','94','Nelson Road','Caithness','YZ8H 5NN',5,12,'a neque. Nullam ut nisi a odio semper','2020-04-04','2021-08-08'),
   ('Imogene','Riley','1998-01-02','07242342558','riley@google.org','26','Sussex Road','Wigtownshire','RL1 8JV',3,5,'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.','2020-11-12','2021-08-22'),
   ('Indigo','Keith','1964-09-12','02585318218','keith@protonmail.ca','61','Suffolk Road','Renfrewshire','BJ38 2QF',3,4,'semper egestas, urna justo faucibus lectus,','2021-02-02','2021-12-09'),
   ('Deanna','Zimmerman','1968-05-02','02034523749','zimmerman@icloud.couk','5','Pine Close','Dorset','L6X 7HL',3,5,'orci. Phasellus dapibus quam quis diam. Pellentesque habitant morbi tristique senectus','2020-01-05','2022-01-01'),
@@ -29,7 +29,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Maris','Harmon','1970-09-27','02748834571','harmon@protonmail.edu','33','Cedar Drive','Herefordshire','VT7L 1CW',2,7,'et magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu','2020-03-12','2021-06-02'),
   ('Herman','Welch','1973-11-16','02271856298','welch7985@aol.ca','22','Meadowside','Staffordshire','B0K 1CO',3,9,'imperdiet, erat nonummy ultricies ornare, elit elit fermentum risus, at fringilla purus mauris a nunc.','2020-11-26','2021-11-27'),
   ('Gary','Case','1970-07-27','02636721836','case409@protonmail.ca','15','Swift Close','Sussex','L5P 3SO',3,13,'sem magna nec quam. Curabitur vel','2021-01-23','2021-10-05'),
-  ('Abdul','Blackburn','1992-06-19','07730541247','blackburn8642@yahoo.com','37','Melrose Avenue','Northumberland','OY2X 9BZ',5,11,'et ultrices posuere cubilia Curae Phasellus ornare. Fusce mollis. Duis sit','2020-02-22','2021-09-14')
+  ('Abdul','Blackburn','1992-06-19','07730541247','blackburn8642@yahoo.com','37','Melrose Avenue','Northumberland','OY2X 9BZ',5,11,'et ultrices posuere cubilia Curae Phasellus ornare. Fusce mollis. Duis sit','2020-02-22','2021-09-14'),
   ('Quamar','Hill','1983-12-23','02542258510','hill@hotmail.net','53','Jubilee Road','Monmouthshire','N13 3XU',1,2,'Duis at lacus. Quisque purus sapien, gravida non, sollicitudin a, malesuada','2021-03-24','2021-12-27'),
   ('Alyssa','Waters','1991-02-09','02113559811','waters6407@icloud.com','37','Melrose Avenue','Northamptonshire','F14 0VV',3,8,'nisl. Nulla eu neque pellentesque massa lobortis ultrices.','2020-06-14','2021-08-09'),
   ('Olivia','Dotson','1985-02-21','02853972555','dotson@icloud.com','22','Kingfisher Drive','Banffshire','GN7T 0RO',1,9,'a, facilisis non, bibendum sed, est. Nunc laoreet','2020-06-12','2021-06-07'),
@@ -39,7 +39,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Dorian','Walters','1964-09-02','02582185889','walters5871@outlook.com','36','Link Road','Sussex','C84 6EE',2,4,'vel arcu eu odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus. Nullam velit','2020-03-01','2021-04-13'),
   ('Alyssa','Willis','1979-04-20','07101469536','willis4806@outlook.net','47','Swallow Close','Morayshire','OM1D 3VY',4,9,'Cras eu tellus eu augue porttitor interdum. Sed auctor odio a','2020-10-19','2021-04-23'),
   ('Lilah','Sykes','1966-02-03','02014128082','sykes@yahoo.org','27','Beechwood Drive','Durham','O6 7SG',1,11,'eget mollis lectus pede et risus. Quisque libero lacus, varius','2020-10-26','2021-08-03'),
-  ('Mason','Yang','1999-04-23','02915523371','yang@hotmail.net','21','Wilson Road','Leicestershire','GP4J 7CO',4,12,'Mauris magna. Duis dignissim tempor arcu. Vestibulum','2020-01-13','2021-12-10')
+  ('Mason','Yang','1999-04-23','02915523371','yang@hotmail.net','21','Wilson Road','Leicestershire','GP4J 7CO',4,12,'Mauris magna. Duis dignissim tempor arcu. Vestibulum','2020-01-13','2021-12-10'),
   ('Anthony','Perez','1986-06-23','02517476763','perez@protonmail.com','63','Scott Close','Cambridgeshire','SD7N 7TZ',5,13,'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris','2020-12-09','2021-07-17'),
   ('Ainsley','Conway','1963-05-01','02763522721','conway@yahoo.couk','61','The Green','Berkshire','F71 3ZC',4,3,'Fusce fermentum fermentum arcu. Vestibulum ante ipsum primis in faucibus orci luctus','2021-02-02','2021-04-22'),
   ('Nero','Savage','1974-09-16','07201838224','savage@icloud.net','26','Melrose Avenue','Northamptonshire','QC28 3VL',4,6,'nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim.','2020-04-30','2021-10-12'),
@@ -49,7 +49,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Barbara','Carrillo','1965-02-14','07236855757','carrillo565@google.net','15','Priory Close','Caithness','TE5 0MS',2,3,'Aliquam ornare, libero at auctor ullamcorper, nisl arcu iaculis enim,','2020-01-17','2021-12-30'),
   ('Sawyer','Daugherty','1973-07-27','07469684117','daugherty@yahoo.org','19','Swallow Close','Essex','Z8 7EO',3,8,'arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam','2020-01-20','2021-10-27'),
   ('Rafael','Watts','1981-08-20','02334771967','watts6004@hotmail.ca','23','The Hollies','Midlothian','K7V 4JU',2,4,'lorem semper auctor. Mauris vel turpis.','2020-06-30','2021-04-28'),
-  ('Nathan','Velez','1972-11-21','07468285665','velez1322@hotmail.edu','92','Bridge Road','Fife','E2 0EL',4,5,'rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus','2020-02-01','2021-12-29')
+  ('Nathan','Velez','1972-11-21','07468285665','velez1322@hotmail.edu','92','Bridge Road','Fife','E2 0EL',4,5,'rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus','2020-02-01','2021-12-29'),
   ('Odette','Paul','1977-05-22','07479727914','paul53@google.net','24','Pembroke Road','Midlothian','DV8Z 2QK',4,11,'sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla','2020-01-20','2021-07-22'),
   ('Robin','Camacho','1965-10-19','07850956135','camacho@hotmail.net','15','Glebe Street','Banffshire','JF1H 1PJ',3,13,'pretium neque. Morbi quis urna. Nunc quis arcu vel quam','2020-04-27','2021-04-20'),
   ('Vivien','Maxwell','1966-02-07','02519729301','maxwell@aol.couk','22','Suffolk Road','Suffolk','AV8W 3SS',1,6,'massa rutrum magna. Cras convallis convallis dolor. Quisque','2020-08-17','2021-06-16'),
@@ -59,7 +59,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Travis','Bennett','1963-11-26','02573484358','bennett9263@protonmail.ca','25','Napier Road','Berkshire','UE2P 5YF',5,7,'ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec,','2020-02-11','2021-06-28'),
   ('Danielle','Alvarez','1980-08-08','02556232058','alvarez@protonmail.com','72','Fern Close','Rutland','VD7P 1FW',4,6,'nisi. Cum sociis natoque penatibus et','2020-05-01','2021-04-24'),
   ('Kieran','Rich','1977-07-25','07227729708','rich9476@google.net','66','Bridge Road','Glamorgan','V77 1ZL',3,11,'aliquet vel, vulputate eu, odio. Phasellus at augue id ante dictum cursus. Nunc mauris','2020-10-18','2021-09-08'),
-  ('Zephr','Roberson','1988-05-18','07608313165','roberson1368@outlook.edu','22','Fern Close','Cheshire','M85 6BV',2,11,'Quisque ornare tortor at risus. Nunc ac','2020-10-07','2021-05-26')
+  ('Zephr','Roberson','1988-05-18','07608313165','roberson1368@outlook.edu','22','Fern Close','Cheshire','M85 6BV',2,11,'Quisque ornare tortor at risus. Nunc ac','2020-10-07','2021-05-26'),
   ('Cairo','Mccarty','1986-12-27','07566644298','mccarty1656@icloud.com','31','Napier Road','Warwickshire','LN2D 2BO',5,4,'tincidunt vehicula risus. Nulla eget metus eu erat semper','2020-09-19','2021-11-14'),
   ('Rhonda','Hart','2001-02-24','07477978955','hart@yahoo.ca','7','Napier Road','Dorset','Y9 5KJ',4,4,'interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit','2020-11-28','2021-11-18'),
   ('Hedy','Glass','1978-02-20','07748933523','glass@google.org','3','Edinburgh Road','Essex','F16 0FJ',5,10,'aliquet molestie tellus. Aenean egestas hendrerit neque. In','2020-07-31','2021-07-22'),
@@ -69,7 +69,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Astra','Avila','1964-03-24','07102044158','avila@icloud.org','95','Glebe Street','Norfolk','X8F 5ZR',4,6,'elit fermentum risus, at fringilla purus','2020-12-30','2021-08-19'),
   ('Christopher','Kinney','1995-06-27','02259674247','kinney5111@yahoo.edu','95','Warwick Street','Banffshire','Q51 5PJ',2,8,'amet, consectetuer adipiscing elit. Aliquam','2020-12-14','2021-08-30'),
   ('Francesca','Webb','1985-10-16','07957421894','webb6998@google.org','34','Howard Street','Lanarkshire','T2D 6CL',3,12,'nibh. Phasellus nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor lorem, eget','2020-04-12','2021-04-08'),
-  ('Lila','Nichols','1989-07-22','07783671608','nichols@icloud.ca','29','Suffolk Road','Monmouthshire','MB1N 8VI',5,13,'semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi','2020-08-29','2021-09-03')
+  ('Lila','Nichols','1989-07-22','07783671608','nichols@icloud.ca','29','Suffolk Road','Monmouthshire','MB1N 8VI',5,13,'semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi','2020-08-29','2021-09-03'),
   ('Allegra','Wilcox','1992-11-21','02943477454','wilcox2519@yahoo.com','27','Jubilee Road','Huntingdonshire','C9 2RO',2,1,'mus. Donec dignissim magna a tortor. Nunc commodo','2021-01-11','2021-05-25'),
   ('Blossom','Diaz','1969-04-26','02522549898','diaz9858@aol.couk','41','The Park','Wigtownshire','N6 7RV',1,1,'vitae nibh. Donec est mauris, rhoncus','2020-12-09','2021-07-27'),
   ('Steven','Sexton','1963-06-18','07376639881','sexton6259@hotmail.ca','93','Birch Close','Montgomeryshire','D6 9IA',5,11,'dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus','2020-10-31','2021-04-02'),
@@ -79,7 +79,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Imelda','Garrett','1965-08-04','02006342241','garrett@google.com','31','The Park','Westmorland','HV5I 3RT',3,13,'lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus','2020-07-20','2021-07-27'),
   ('Peter','Sosa','1972-05-08','07660136472','sosa@hotmail.com','41','Bridge Road','Midlothian','UB4I 5QX',1,6,'amet massa. Quisque porttitor eros nec tellus.','2020-04-09','2021-09-08'),
   ('Lilah','Levy','1976-01-09','02867425233','levy2682@google.org','61','Middleton Road','Somerset','B3 5AU',3,10,'id, ante. Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et,','2021-02-20','2021-04-28'),
-  ('Preston','Petty','1975-07-01','07883822511','petty@yahoo.org','78','The Hollies','Selkirkshire','V9M 1SJ',3,10,'eu turpis. Nulla aliquet. Proin velit.','2020-01-13','2021-06-19')
+  ('Preston','Petty','1975-07-01','07883822511','petty@yahoo.org','78','The Hollies','Selkirkshire','V9M 1SJ',3,10,'eu turpis. Nulla aliquet. Proin velit.','2020-01-13','2021-06-19'),
   ('Simone','Cervantes','1995-02-09','02828796131','cervantes7229@hotmail.ca','89','Priory Close','Banffshire','C51 1KO',1,12,'odio. Nam interdum enim non nisi.','2020-11-29','2021-04-05'),
   ('Isadora','Mcmillan','1994-11-10','02228249201','mcmillan7054@google.edu','4','Napier Road','Wiltshire','R2E 2QO',2,7,'Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non leo. Vivamus nibh','2020-05-18','2021-10-24'),
   ('Karina','Skinner','2000-04-11','02410513153','skinner@protonmail.couk','95','Middleton Road','Kincardineshire','E3B 4BL',1,6,'rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem','2020-04-13','2021-08-27'),
@@ -89,7 +89,7 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Julie','Callahan','1963-09-12','07414085252','callahan@hotmail.net','3','Napier Road','Durham','XK1I 5KD',3,13,'sodales purus, in molestie tortor nibh sit amet orci. Ut sagittis','2021-02-21','2021-12-13'),
   ('Jackson','Hewitt','1968-07-30','02127747087','hewitt@aol.net','95','Waverley Road','Kincardineshire','X3J 8QR',2,3,'vel, mauris. Integer sem elit, pharetra ut, pharetra sed, hendrerit','2020-06-02','2021-07-07'),
   ('Galena','Dawson','1982-04-11','02376584153','dawson3061@outlook.ca','36','Warwick Street','Shropshire','C4G 5CF',2,8,'Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in','2020-01-08','2021-09-30'),
-  ('Erich','Mcmillan','2000-02-16','07126669671','mcmillan@google.couk','92','Sandringham Road','Norfolk','I4 4ZG',1,9,'id, erat. Etiam vestibulum massa rutrum magna. Cras','2020-11-20','2021-10-22')
+  ('Erich','Mcmillan','2000-02-16','07126669671','mcmillan@google.couk','92','Sandringham Road','Norfolk','I4 4ZG',1,9,'id, erat. Etiam vestibulum massa rutrum magna. Cras','2020-11-20','2021-10-22'),
   ('Roary','Anthony','1989-07-30','07287632564','anthony@google.org','47','Sandringham Road','Morayshire','AD3 1RV',3,11,'ipsum dolor sit amet, consectetuer adipiscing elit. Etiam laoreet, libero','2020-02-20','2021-10-08'),
   ('Lacota','Macdonald','1977-12-12','02515584524','macdonald9825@icloud.couk','92','Jubilee Road','Essex','G5 1EK',4,3,'luctus vulputate, nisi sem semper erat, in consectetuer ipsum nunc id enim. Curabitur massa.','2020-10-16','2021-12-29'),
   ('Julian','Little','1975-09-17','02581116846','little4589@aol.couk','63','Sussex Road','Denbighshire','PZ81 1XT',3,8,'Nunc sollicitudin commodo ipsum. Suspendisse non leo. Vivamus nibh dolor, nonummy ac, feugiat','2020-11-25','2021-10-10'),
@@ -100,4 +100,3 @@ INSERT INTO patient (patient_fname, patient_lname, patient_dob, patient_phone, p
   ('Lucius','Jennings','1981-10-14','07275342979','jennings@yahoo.couk','47','Kenilworth Road','Perthshire','T7S 1VR',3,2,'non enim. Mauris quis turpis vitae purus gravida','2021-03-18','2021-08-23'),
   ('Laith','Hendricks','1998-03-03','07883173443','hendricks4508@aol.com','61','Waverley Road','Somerset','K3 1OB',1,14,'aliquam iaculis, lacus pede sagittis augue, eu tempor erat neque non quam. Pellentesque habitant morbi','2020-08-19','2021-10-27'),
   ('Signe','Bartlett','1973-12-17','02866546616','bartlett@aol.com','89','Edinburgh Road','Yorkshire','F42 6JF',5,11,'arcu. Vestibulum ante ipsum primis','2020-01-03','2021-07-30');
-
