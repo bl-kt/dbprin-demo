@@ -1,54 +1,46 @@
 -- STAFF 
-
 INSERT INTO staff (staff_fname, staff_lname, staff_dob, staff_phone, staff_email, staff_add1, staff_add2, staff_county, staff_postcode)
 VALUES
-('Jaci', 'Kingsley', '1991-08-19', '012345678', 'jaci@hospital.com', '40', 'Portsmouth Road', 'Hampshire', 'Po1 1ab'),
-('Anneka', 'Brittain', '1986-12-25', '23456789', 'anneka@hospital.com', '38', 'Stanhope Road', 'Hampshire', 'Po1, 0bc'),
-('Kitra', 'Bowen', '1969-09-18', '12398765','suspendisse.non.leo@protonmail.ca', '551', 'Inn Rd','Hampshire','Po1 1cd'),
-('Adrienne', 'Webster', '1988-03-18', '14340000', 'a.auctor@aol.com', '586', 'Gravida Street', 'Surrey','GU1 1AB'),
-('Jasmine', 'Bryant', '1980-08-07', '7763576353', 'arcu.vivamus.sit@protonmail.edu', '60', 'Aliquam St',  'Sussex','W12 QAB'),
-
-('Aretha','Howe','1999-08-22', '0169775636','auctor.velit.aliquam@protonmail.net', '81','Sed Rd','Monmouthshire','C73 8SN'),
-('Jelani','Saunders','2002-10-15', '01111641563','erat.in.consectetuer@hotmail.net', '12','Ac Rd','Durham','KU1Q 8UY'),
-('Ocean','Allen','1955-03-30', '01501817426','pede.malesuada@aol.net', '52','Pellentesque Av','Inverness-shire','FV3B 0GR'),
-('Risa','Mcguire','1976-06-21', '01716634704' ,'etiam.vestibulum@outlook.co.uk', '83','Arcu. Rd','Denbighshire','FX50 1MX'),
-
-('Cade','Lloyd','1982-05-01', '01916375276','ornare.fusce.mollis@yahoo.ca', '19','Quisque Av','Morayshire','FR3 2LC'),
-('Hoyt','Steele','13-08-1950','076 7525 2458','sed.eu.nibh@yahoo.net','32',' Rock Lawns','Dumfriesshire','SI73 9WH'),
-('Belle','Mclaughlin','16-04-1975','0845 46 41','ut@protonmail.edu','32','Ladywell Hills','Clackmannanshire','AB68 7MR'),
-('Kaitlin','Simon','05-07-1967','0845 46 43','mauris.quis@protonmail.org','86','Saddlers Meadows','Inverness-shire','RX3 0VF'),
-('Vielka','Haney','03-07-1963','(027) 1149 1724','montes.nascetur@aol.net','49','Ladywell Hills','Glamorgan','DT6 8PO'),
-('Cedric','Alford','02-05-1957','07872 518810','eu.erat.semper@outlook.com','65','Sandhurst Grove','Argyllshire','I52 4ES'),
-
-('Levi','Morrow','13-06-1962','0938 286 3391','ultricies.dignissim@icloud.net','37',' Peel Avenue','Merionethshire','X0 7HG'),
-('Nathaniel','Vazquez','25-02-1984','056 0635 1957','non.nisi@google.org','45','Wheatsheaf Fairway','Lanarkshire','G4R 6TN'),
-('Edan','Dennis','21-04-1963','07624 019640','non.justo.proin@icloud.edu','34','Melrose Cliff','Argyllshire','V6 5RK'),
-('Tyrone','Fisher','04-11-1978','(01215) 26372','sed@protonmail.org','25','Raven Brae','Denbighshire','J2 6OR'),
-('Garrison','Gallagher','20-09-1990','(01567) 12654','tellus.sem.mollis@outlook.couk','13','Raven Brae','Herefordshire','K33 8RJ'),
-
-('Chase','Duran','01-04-1971','07553 131725','natoque@hotmail.org','74','Saddlers Meadows','Kinross-shire','RK3I 8GE'),
-('Fleur','Jefferson','27-07-1999','(0151) 407 8704','cras.eu.tellus@hotmail.com','32','Spinney Passage','Kincardineshire','J4 6DR'),
-('Jason','Mays','24-07-1961','(0161) 895 1135','consectetuer@google.edu','28','Waltham Courtyard','Dorset','NL03 3SV'),
-('Kenneth','Nixon','31-01-1959','0353 873 2383','dictum@aol.couk','79',' Ringwood Mews','Dumfriesshire','VV18 9NH'),
-('Desirae','Welch','22-02-1986','(020) 8179 6547','ac.ipsum@protonmail.couk','87','Stuart Dell','Midlothian','OT3 7FU'),
-
-('Alan','Ware','29-05-1962','0800 981147','non.arcu@outlook.org','24','Brackenlea','Renfrewshire','FB3M 6HY'),
-('Melvin','Melton','20-11-1980','056 7474 2773','nullam.suscipit@aol.edu','31','Brookhouse Woods','Inverness-shire','HY78 6JW'),
-('Yeo','Potter','20-10-1996','(016977) 5546','eu.metus@icloud.couk','27','Nicholson Rise','Lanarkshire','YC6 8IS'),
-('Rashad','Rush','03-09-1962','056 2187 1803','cum.sociis@icloud.couk','47','Howden Lodge','Westmorland','VD1 3YP'),
-('Jacob','Velez','01-09-1985','070 1811 6623','diam.pellentesque@hotmail.edu','27','Sandhurst Grove','Kent','BV2 4MB'),
-
-('Thomas','Shields','15-06-1984','(01676) 146149','sed.nec.metus@outlook.ca','76','Post Office Village','Gloucestershire','A6 7UP'),
-('Nero','Marshall','23-03-1967','0845 46 48','orci@google.edu','52','Seaview Road','Ayrshire','JL8 4YO'),
-('Libby','Higgins','27-02-1984','056 1164 7282','arcu@outlook.net','50','Dawson Ridge','Aberdeenshire','DL9J 5OO'),
-('Freya','Doyle','05-04-1974','0845 46 44','dictum.sapien@protonmail.ca','97','Dundee Terrace','Wiltshire','R57 3UU'),
-('Hadassah','Miranda','29-03-1979','0397 874 6865','sed.congue@icloud.edu','39','Stone Court','Banffshire','O83 2XR'),
-
-('Carlos','Manning','23-12-1996','0800 1111','cum.sociis@yahoo.couk','77','Shapwick Road','Lancashire','MG53 9UG'),
-('Magee','Logan','05-05-1984','(01767) 422465','pede.blandit.congue@aol.edu','73','Brookhouse Woods','Banffshire','V1 3WJ'),
-('Kelsey','Benton','05-08-1969','(016977) 1583','nulla@yahoo.couk','91','Nicholson Rise','Gloucestershire','O34 0NU'),
-('Ann','Shepherd','23-08-1969','0800 1111','varius.nam@yahoo.net','51','Stone Court','Pembrokeshire','G7U 3SD'),
-('Anika','Barr','01-07-1963','0500 224625','ante.dictum@hotmail.org','74','Howden Lodge','Yorkshire','G8 0VQ');
+  ('Mannix','Armstrong','1980-06-14','02261679957','armstrong4575@icloud.ca','42','Wilson Road','Stirlingshire','UM1F 3XG'),
+  ('Glenna','Horne','1972-09-02','02291627395','horne@google.couk','47','Edinburgh Road','Inverness-shire','B3O 8BZ'),
+  ('Malik','Parrish','1987-10-17','02286261757','parrish3916@google.ca','95','Suffolk Road','Buckinghamshire','FW3T 3NH'),
+  ('Yoshio','Smith','1974-08-21','07822290987','smith9594@google.couk','1','Francis Road','Ross-shire','UU7T 3CJ'),
+  ('Joshua','Phelps','1963-06-24','02744474332','phelps1549@aol.ca','26','Link Road','Suffolk','K5 3RM'),
+  ('Zeph','Walton','1966-10-05','02863181096','walton@icloud.org','28','Swallow Close','Essex','X1 5ST'),
+  ('Michelle','Huffman','1998-04-18','02885165062','huffman@protonmail.com','5','Sandringham Road','Shropshire','HJ0Y 3XX'),
+  ('Mona','Woodard','1988-07-07','02314603879','woodard6635@outlook.edu','72','Lodge Close','Carmarthenshire','OF6B 9NV'),
+  ('Katell','Haney','1988-11-02','02455676313','haney@google.com','5','Birch Close','Pembrokeshire','Z8Y 6EG'),
+  ('Remedios','Frederick','2000-10-30','07252497557','frederick@google.com','94','Swallow Close','Ayrshire','Z55 6CR');
+  ('Gavin','Best','1984-04-07','07422182822','best9232@outlook.edu','27','Wilson Road','Cumberland','GP16 6VM'),
+  ('Audrey','Lynch','1988-05-30','02825818632','lynch@google.edu','39','The Hollies','Huntingdonshire','O1J 9DD'),
+  ('Joel','Landry','1989-04-03','07367667093','landry1237@aol.com','20','Fern Close','Bedfordshire','K8 2LI'),
+  ('Odette','Leonard','1993-08-20','07432533809','leonard634@outlook.net','91','Francis Road','Montgomeryshire','B4L 4EK'),
+  ('Sophia','Collier','1967-04-22','07862573552','collier6457@protonmail.org','20','Glebe Street','Wiltshire','Y0 3RZ'),
+  ('Evelyn','Guerrero','1998-10-10','07219579226','guerrero3243@aol.ca','85','School Street','Gloucestershire','H28 6LQ'),
+  ('Aspen','Barker','1969-08-13','07525533258','barker8039@yahoo.com','7','Hampton Road','Pembrokeshire','PF1 1WM'),
+  ('Suki','Dale','1989-07-09','02172133011','dale@yahoo.couk','19','Francis Road','Angus','U4 8HW'),
+  ('Nero','Alvarez','1963-07-18','02713678526','alvarez7841@icloud.net','19','Sussex Road','Cheshire','EN7 1OD'),
+  ('Fletcher','Hendricks','1968-01-09','07142664398','hendricks@yahoo.net','40','The Hollies','Derbyshire','SI6E 3NK');
+  ('Howard','Noel','1971-03-06','07952828634','noel4731@google.org','40','Beechwood Drive','Aberdeenshire','K8 7WY'),
+  ('Natalie','Brennan','1966-07-21','02311460861','brennan@protonmail.org','50','Francis Road','Gloucestershire','WL8R 4US'),
+  ('Xanthus','Winters','1982-05-04','02657724777','winters2040@outlook.org','47','Priory Close','Kincardineshire','J22 3HK'),
+  ('Ariel','Sargent','1966-12-04','02266056687','sargent3969@outlook.org','50','Francis Road','Brecknockshire','NN1F 1RV'),
+  ('Malachi','Aguirre','1968-01-09','07788447151','aguirre6441@hotmail.couk','63','The Park','Angus','L5 8OQ'),
+  ('Victoria','Lucas','1968-12-15','02645278187','lucas@protonmail.org','32','Cedar Drive','Cumberland','T53 7YC'),
+  ('Fitzgerald','Curtis','1984-07-15','02660963283','curtis@icloud.org','66','Pembroke Road','Hampshire','NF77 0IN'),
+  ('Gemma','Reynolds','1970-07-29','02691130633','reynolds@outlook.edu','47','School Street','Hertfordshire','C9 1JO'),
+  ('Justin','Douglas','1974-10-29','02768286621','douglas158@google.org','36','Napier Road','Warwickshire','DF3B 6SY'),
+  ('Leigh','Fernandez','1969-03-21','02766487035','fernandez2091@aol.edu','31','Pembroke Road','Orkney','TU6V 9EI');
+  ('Jasper','Castro','2001-10-05','07049089639','castro8490@protonmail.edu','4','Nelson Road','Buckinghamshire','IE1R 4JQ'),
+  ('Roth','Mccullough','1993-08-25','02655393615','mccullough@outlook.net','52','Suffolk Road','Lancashire','B40 7BZ'),
+  ('Daria','Douglas','1977-04-24','07763182935','douglas@google.com','21','Scott Close','Oxfordshire','U7 1GH'),
+  ('Lois','Spencer','1993-10-19','02378586041','spencer9345@yahoo.couk','95','Middleton Road','Fife','C41 2HC'),
+  ('Kasper','Noel','1983-07-25','02348027282','noel1843@protonmail.couk','51','Rutland Road','Shropshire','O8 1WX'),
+  ('Baker','Horn','1988-04-21','07555174124','horn@hotmail.com','78','Rutland Road','Stirlingshire','AM74 2LG'),
+  ('Julie','Blackburn','2000-07-23','07465833178','blackburn6055@google.edu','33','Bridge Road','Kirkcudbrightshire','FZ1 9CG'),
+  ('Eagan','Jacobson','1997-12-07','07725175047','jacobson@aol.edu','50','Cedar Drive','Nottinghamshire','AA58 4PT'),
+  ('Zoe','Wall','1988-10-21','02753682833','wall@outlook.edu','41','Pembroke Road','Leicestershire','C0 6SK'),
+  ('Bethany','Stark','1997-10-08','02656335209','stark@yahoo.ca','20','Bridge Road','Angus','V78 2HR');
 
 
 -- WARD SPECIALITY 
