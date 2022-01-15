@@ -1,3 +1,4 @@
+-- WARD SPECIALITY 
 INSERT INTO ward_speciality (speciality_name, speciality_comments)
 VALUES
 ('A & E', 'Accident and Emergency'), 
