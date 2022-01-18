@@ -633,3 +633,8 @@ INSERT INTO patient_complaint (patient_id, complaint_id, pat_com_comments) VALUE
 (89,89,'Cras dolor dolor, tempus'),
 (90,90,'Mauris ut quam');
 
+-- Remove some date_discharged values so that we have current patients in the hospital
+-- Make the even id numbers NULL?
+UPDATE patient 
+SET patient_discharged = NULL 
+WHERE patient_id % 2 = 0;

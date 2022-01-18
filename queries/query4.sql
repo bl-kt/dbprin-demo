@@ -9,6 +9,6 @@ JOIN complaint c ON pc.complaint_id = c.complaint_id
 JOIN treatment t ON  pc.complaint_id = t.complaint_no 
 JOIN doctor_treatment dt ON t.treatment_id = dt.treatment_id
 JOIN staff_doctor sd ON dt.doctor_id = sd.doctor_id
-WHERE sd.doctor_id = '2';
+WHERE sd.doctor_id = '2' AND p.patient_discharged IS NULL;
 
 -- need to add where not yet discharged. 

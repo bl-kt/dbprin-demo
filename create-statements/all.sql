@@ -98,4 +98,3 @@ CREATE TABLE patient_complaint (
     PRIMARY KEY(patient_id, complaint_id),
     pat_com_comments VARCHAR(40)
 );
-
