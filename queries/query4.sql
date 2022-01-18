@@ -4,7 +4,8 @@
 
 SELECT p.patient_id AS "Patient ID",
 CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name",
-p.patient_ward AS "Ward", p.patient_comments AS "Comments",
+p.patient_ward AS "Ward",
+p.patient_comments AS "Comments",
 c.complaint_desc AS "Complaint",
 t.treatment_id AS "Treatment ID",
 t.treatment_desc AS  "Treatment",
