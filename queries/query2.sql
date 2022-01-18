@@ -1,6 +1,11 @@
 -- WARD CARD
+-- Who?
 
-SELECT ward_name, ward_speciality, CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name", CONCAT(staff_fname, ' ', staff_lname) AS "Nurses", is_head_nurse, gp_name, treatment_start FROM patient
+SELECT ward_name, ward_speciality,
+CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name",
+CONCAT(staff_fname, ' ', staff_lname) AS "Nurses",
+is_head_nurse, gp_name, treatment_start
+FROM patient
 JOIN general_practitioner ON patient.patient_gp = general_practitioner.gp_id
 JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
 JOIN complaint ON complaint.complaint_id = patient_complaint.complaint_id
@@ -15,3 +20,5 @@ LIMIT 10;
 -- This query is based off the physical cards that the case study provided us with,
 -- in order to formulate our ERD. The business use of this query would be to display a
 -- ward's current patients, admittance dates, staff and specialty.
+
+-- Suggestion: Maybe COPY into a file on the end, to 'produce' the card?
