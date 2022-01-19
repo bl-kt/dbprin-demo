@@ -34,18 +34,17 @@ ORDER BY patient.patient_lname ASC;
 
 -- SELECT distinct(COUNT(gp_name)) from gp;
 
-SELECT DISTINCT(COUNT(gp_name)) AS "gp count" FROM (SELECT general_practitioner.gp_name,
-treatment_desc FROM general_practitioner
-JOIN patient ON patient_gp = gp_id
+-- SELECT DISTINCT(COUNT(gp_name)) AS "gp count" FROM (SELECT general_practitioner.gp_name,
+-- treatment_desc FROM general_practitioner
+-- JOIN patient ON patient_gp = gp_id
+-- JOIN patient_complaint ON patient.patient_id = patient_complaint.patient_id
+-- JOIN treatment ON patient_complaint.complaint_id = treatment.complaint_no
+-- GROUP BY treatment.treatment_desc
+-- ORDER BY gp_name ASC) AS "surgery practice";
+
+SELECT DISTINCT(COUNT(gp_name)) AS "gp count" FROM (SELECT gp_name, treatment_desc from general_practitioner
+JOIN patient ON patient.patient_gp = gp_id
 JOIN patient_complaint ON patient.patient_id = patient_complaint.patient_id
 JOIN treatment ON patient_complaint.complaint_id = treatment.complaint_no
-GROUP BY treatment.treatment_desc
-ORDER BY gp_name ASC) AS "surgery practice";
-
-
-SELECT DISTINCT(COUNT(gp_name)) AS gp_name FROM (SELECT general_practitioner.gp_name, treatment_desc from general_practitioner
-JOIN patient ON patient_gp = gp_id
-JOIN patient_complaint ON patient_complaint.patient_id = patient.patient_id
-JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
-) AS "getting all the data"; 
+ORDER BY gp_name ASC) as "The Gp with the surgery treatment";
 
