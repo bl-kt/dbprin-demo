@@ -14,8 +14,8 @@ DATE_PART('day', t.treatment_end::timestamp - t.treatment_start::timestamp) AS "
 p.patient_admitted AS "Admitted Date",
 p.patient_discharged AS "Discharged Date",
 DATE_PART('day',p.patient_discharged::timestamp - p.patient_admitted::timestamp) AS "Total Hospital Stay (days)",
--- NOT WORKING      AVG(DATE_PART('day',p.patient_discharged::timestamp - p.patient_admitted::timestamp)) AS "Average Patient Stay Length"
--- NOT WORKING      AVG(DATE_PART('days',p.patient_admitted::timestamp - p.patient_discharged::timestamp) - DATE_PART('day',p.patient_admitted::timestamp - p.patient_discharged::timestamp)) AS "Divergence from Average Stay Length"
+NOT WORKING      AVG(DATE_PART('day',p.patient_discharged::timestamp - p.patient_admitted::timestamp)) AS "Average Patient Stay Length"
+NOT WORKING      AVG(DATE_PART('days',p.patient_admitted::timestamp - p.patient_discharged::timestamp) - DATE_PART('day',p.patient_admitted::timestamp - p.patient_discharged::timestamp)) AS "Divergence from Average Stay Length"
 FROM patient p
 JOIN patient_complaint pc ON p.patient_id = pc.patient_id
 JOIN complaint c ON c.complaint_id = pc.complaint_id
