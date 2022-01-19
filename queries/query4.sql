@@ -19,3 +19,5 @@ JOIN staff_doctor sd ON dt.doctor_id = sd.doctor_id
 WHERE sd.doctor_id = '2' AND p.patient_discharged IS NULL;
 
 -- need to add where not yet discharged.
+-- remove treatment id
+-- change order to be doctor-focussed, not patient focussed.

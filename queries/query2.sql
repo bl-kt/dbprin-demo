@@ -21,4 +21,9 @@ LIMIT 10;
 -- in order to formulate our ERD. The business use of this query would be to display a
 -- ward's current patients, admittance dates, staff and specialty.
 
+-- which staff are in which ward, treating which patients
+
+-- distinct
+-- either change business need or order of columns
+
 -- Suggestion: Maybe COPY into a file on the end, to 'produce' the card?

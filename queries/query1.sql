@@ -15,3 +15,7 @@ JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
 -- them - alongside other relevant information.
 
 -- Suggestion: Maybe COPY into a file on the end, to 'produce' the card?
+-- where patient id = ?
+-- tidy data
+-- orderby
+-- remove gp address
