@@ -1,9 +1,5 @@
 -- Char
 
-<<<<<<< HEAD
--- CASE / NOT / EXISTS?
--- Something to do with show all discharged patients?
-=======
 -- A query that shows the average length of stay of patients in a certain ward, or of a certain treatment, AS well AS their individual stay lengths
 -- Business Usage: To determine whether patients are being treated fast enough compared to given treatment metrics, and which treatments are taking longer to treat than others
 
@@ -26,4 +22,3 @@ JOIN complaint c ON c.complaint_id = pc.complaint_id
 JOIN treatment t ON pc.complaint_id = t.complaint_no
 WHERE p.patient_discharged IS NOT NULL
 GROUP BY p.patient_fname, p.patient_lname, p.patient_ward, c.complaint_date, t.treatment_start, t.treatment_end, p.patient_discharged, p.patient_admitted;
->>>>>>> a496ef6f0a62acf26d576454eea5216dc3763d90
