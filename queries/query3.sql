@@ -2,6 +2,14 @@
 -- A query that shows the average length of stay of patients in a certain ward, or of a certain treatment, AS well AS their individual stay lengths
 -- Business Usage: To determine whether patients are being treated fast enough compared to given treatment metrics, and which treatments are taking longer to treat than others
 
+-- The inspiration behind this query comes from my time as a drive-thru worker.
+-- We had targets as to how quickly we should serve people - So I think it is feasible to suggest hospitals will have quotas on how quickly to treat people.
+-- As such, the business use of this query is to view information related to tracking how quickly each patient is treated.
+-- The query displays the time between a complaint being registered, and treatment starting, the length of time between treatment start and end, as well as total hospital time.
+-- It then displays the average total hospital stay time, and how far from the average each patient's individual hospital stay is.
+-- To summarise, this query can be used to ensure that the hospital staff are treating patients quickly enough - and if there are any problem points, they can be inferred from this query.
+-- The inclusion of patient name and ward are to help infer problem areas, or to excuse outlier cases.
+
 SELECT
   CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name",
   p.patient_ward AS "Ward",
