@@ -1,3 +1,12 @@
+-- This top one works! The where is optional, to return all GP's and GP counts :)
+SELECT gp.gp_name AS "GP Name", COUNT((p.patient_gp)) AS "GP count" 
+FROM patient p
+JOIN general_practitioner gp ON p.patient_gp = gp_id
+WHERE patient_gp = '1'
+GROUP BY gp.gp_name;
+
+
+
 -- SELECT CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name"
 --        w.ward_name AS "Ward Name", ws.speciality_name AS "Ward Speciality"
 -- FROM patient AS p
