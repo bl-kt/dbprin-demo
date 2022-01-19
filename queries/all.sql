@@ -37,10 +37,14 @@ ORDER BY treatment_start
 LIMIT 10;
 -- need to do a joint on gp name and patient.
 
-SELECT COUNT (*) FROM (
-    SELECT CONCAT_WS(' ', patient_fname, patient_lname) FROM patient
-    WHERE patient_comments IS NOT NULL) AS "Number of Patients With Comments";
-)
+-- returning the number of patients that have not been discharged from the Starfish ward
+SELECT COUNT(*) AS "Number of Patients Still Admitted in Starfish Ward" FROM (
+    SELECT CONCAT_WS(' ', patient_fname, patient_lname), ward_name, ward_speciality FROM patient
+    JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
+    JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
+    JOIN ward ON patient.patient_ward = ward.ward_id
+    JOIN ward_speciality ON ward.ward_speciality = ward_speciality.speciality_id
+    WHERE ward_name = 'Starfish' AND patient_discharged IS NULL) AS "Number of Patients in Starfish Ward";
 
 -- which patient has left as a sql query
 
