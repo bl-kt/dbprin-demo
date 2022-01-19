@@ -1,5 +1,4 @@
 -- Char
-
 -- A query that shows the average length of stay of patients in a certain ward, or of a certain treatment, AS well AS their individual stay lengths
 -- Business Usage: To determine whether patients are being treated fast enough compared to given treatment metrics, and which treatments are taking longer to treat than others
 
@@ -9,14 +8,22 @@ SELECT
   DATE_PART('day',c.complaint_date::timestamp - t.treatment_start::timestamp) AS "Complaint Registered to Treatment Start (days)",
   DATE_PART('day', t.treatment_end::timestamp - t.treatment_start::timestamp) AS "Treatment Start to End (days)",
   DATE_PART('day',p.patient_discharged::timestamp - p.patient_admitted::timestamp) AS "Patient Admitted to Patient Discharged (days)",
-  ( SELECT AVG(stayLength)
+  ( SELECT ROUND(AVG(stayLength))
     FROM (
       SELECT
         DATE_PART('day', p.patient_discharged::timestamp - p.patient_admitted::timestamp) as stayLength
       FROM
         patient p
     ) as calcAvg
-  ) as "Average Patient Admitted to Patient Discharged (days)"
+  ) as "Average Patient Admitted to Patient Discharged (days)",
+  ( SELECT ROUND(AVG(stayLength) - DATE_PART('day', p.patient_discharged::timestamp - p.patient_admitted::timestamp))
+    FROM (
+      SELECT
+        DATE_PART('day', p.patient_discharged::timestamp - p.patient_admitted::timestamp) as stayLength
+      FROM
+        patient p
+    ) as calcAvg
+  ) as "Difference from Average (days)"
 FROM
   patient p
 JOIN
@@ -28,5 +35,3 @@ JOIN
 WHERE
   p.patient_discharged IS NOT NULL
 ORDER BY p.patient_ward;
-
--- sub queries and sum
