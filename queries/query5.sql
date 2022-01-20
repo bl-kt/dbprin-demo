@@ -12,7 +12,9 @@ SELECT DISTINCT(gp_name) AS "name of GP surgery", COUNT(treatment_desc) AS "no o
 JOIN patient ON patient.patient_gp = gp_id
 JOIN patient_complaint ON patient.patient_id = patient_complaint.patient_id
 JOIN treatment ON patient_complaint.complaint_id = treatment.complaint_no
-WHERE general_practitioner.gp_name LIKE '%Somers Town Health Centre%' OR general_practitioner.gp_name LIKE '%Vernsborne Surgery%'
-GROUP BY gp_name;
+WHERE general_practitioner.gp_name LIKE '%Somers Town Health Centre%' OR general_practitioner.gp_name LIKE '%Dickens Gardens Medical Centre%'
+AND patient.patient_id IS NOT NULL
+GROUP BY gp_name
+ORDER BY gp_name ASC;
 
 -- lol its like its a war of coding. gurvir vs char and holly
