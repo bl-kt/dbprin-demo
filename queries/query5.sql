@@ -9,7 +9,7 @@ GROUP BY gp.gp_name;
 
 -- gurvirs code
 SELECT DISTINCT(gp_name) AS "name of GP surgery",
-COUNT(treatment_desc) AS "no of treatments based on referals"
+COUNT(treatment_desc) AS "no of treatments based on referrals"
 FROM general_practitioner gp
 JOIN patient p ON p.patient_gp = gp.gp_id
 JOIN patient_complaint pc ON p.patient_id = pc.patient_id
