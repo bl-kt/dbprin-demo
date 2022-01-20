@@ -22,4 +22,5 @@ JOIN treatment t ON  pc.complaint_id = t.complaint_no
 JOIN doctor_treatment dt ON t.treatment_id = dt.treatment_id
 JOIN staff_doctor sd ON dt.doctor_id = sd.doctor_id
 JOIN staff s ON sd.doctor_id = s.staff_id
-WHERE sd.doctor_id = '2' AND p.patient_discharged IS NULL;
+WHERE sd.doctor_id = '2' AND p.patient_discharged IS NULL
+ORDER BY p.patient_ward;
