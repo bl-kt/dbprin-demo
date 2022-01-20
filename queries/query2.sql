@@ -2,10 +2,18 @@
 -- Who?
 
 -- can't figure out how to get Distinct working
-SELECT  DISTINCT ward_name, ward_speciality,
-CONCAT(staff_fname, ' ', staff_lname) AS "Nurse",
+SELECT DISTINCT ward_name, ward_speciality, 
+CONCAT(staff_fname, ' ', staff_lname) AS "Nurse", is_head_nurse, 
+gp_name, 
+treatment_start,
+CONCAT(patient_fname, ' ', patient_lname) AS "Patient Full Name" FROM (
+SELECT ward_name, ward_speciality,
+-- CONCAT(staff_fname, ' ', staff_lname) AS "Nurse",
+staff_fname, staff_lname,
 is_head_nurse,
-CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name", gp_name, treatment_start
+-- CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name",
+patient_fname, patient_lname,
+gp_name, treatment_start,
 -- FROM (SELECT DISTINCT patient.patient_id FROM patient) AS "testing"
 FROM patient
 INNER JOIN ward ON patient.patient_ward = ward.ward_id
@@ -16,8 +24,9 @@ INNER JOIN general_practitioner ON patient.patient_gp = general_practitioner.gp_
 INNER JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
 INNER JOIN complaint ON complaint.complaint_id = patient_complaint.complaint_id
 INNER JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
-WHERE patient_discharged IS NULL
-ORDER BY treatment_start;
+WHERE patient.patient_discharged IS NULL
+) AS "Current Patients Across Wards";
+
 
 -- This query is based off the physical cards that the case study provided us with,
 -- in order to formulate our ERD. The business use of this query would be to display a
