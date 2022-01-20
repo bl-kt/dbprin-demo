@@ -634,7 +634,44 @@ INSERT INTO patient_complaint (patient_id, complaint_id, pat_com_comments) VALUE
 (90,90,'Mauris ut quam');
 
 -- Remove some date_discharged values so that we have current patients in the hospital
--- Make the even id numbers NULL?
+-- Make the even id numbers NULL
 UPDATE patient 
 SET patient_discharged = NULL 
 WHERE patient_id % 2 = 0;
+
+
+
+
+-- Don't use
+-- Selecting the discharge dates which don't match up
+SELECT patient_discharged FROM patient p
+JOIN patient_complaint pc ON p.patient_id = pc.patient_id
+JOIN complaint c ON pc.complaint_id = c.complaint_id
+JOIN treatment t ON c.complaint_id = t.complaint_no
+WHERE DATE_PART('day',p.patient_discharged::timestamp - p.patient_admitted::timestamp) < 0
+OR 
+--complaint registered to treatment start
+DATE_PART('day',c.complaint_date::timestamp - t.treatment_start::timestamp) < 0
+OR
+-- treatment start to treatment end
+DATE_PART('day', t.treatment_end::timestamp - t.treatment_start::timestamp) < 0;
+
+-- Update the discharge dates which don't match up
+UPDATE patient p
+SET patient_discharged = '2022-01-18'
+WHERE -- patient admitted to patient discharge
+DATE_PART('day', p.patient_discharged::timestamp - p.patient_admitted::timestamp) < 0;
+
+UPDATE patient p
+SET patient_discharged = '2022-01-18'
+JOIN patient_complaint pc ON p.patient_id = pc.patient_id
+JOIN complaint c ON pc.complaint_id = c.complaint_id
+JOIN treatment t ON c.complaint_id = t.complaint_no
+WHERE -- patient admitted to patient discharge
+DATE_PART('day',p.patient_discharged::timestamp - p.patient_admitted::timestamp) < 0
+OR 
+--complaint registered to treatment start
+DATE_PART('day',c.complaint_date::timestamp - t.treatment_start::timestamp) < 0
+OR
+-- treatment start to treatment end
+DATE_PART('day', t.treatment_end::timestamp - t.treatment_start::timestamp) < 0;
