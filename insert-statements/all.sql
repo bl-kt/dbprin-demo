@@ -639,6 +639,12 @@ UPDATE patient
 SET patient_discharged = NULL 
 WHERE patient_id % 2 = 0;
 
+-- Just an idea: 
+-- Change the other half of discharged dates so there are no more minus numbers.
+UPDATE patient
+SET patient_discharged = '2022-01-20'
+WHERE patient_id % 2 = 1;
+
 
 
 
