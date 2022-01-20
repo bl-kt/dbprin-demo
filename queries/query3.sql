@@ -1,6 +1,6 @@
 -- Char
--- A query that shows the average length of stay of patients in a certain ward, or of a certain treatment, AS well AS their individual stay lengths
--- Business Usage: To determine whether patients are being treated fast enough compared to given treatment metrics, and which treatments are taking longer to treat than others
+
+-- Business Use
 
 -- The inspiration behind this query comes from my time as a drive-thru worker.
 -- We had targets as to how quickly we should serve people - So I think it is feasible to suggest hospitals will have quotas on how quickly to treat people.
@@ -42,4 +42,5 @@ JOIN
   treatment t ON pc.complaint_id = t.complaint_no
 WHERE
   p.patient_discharged IS NOT NULL
-ORDER BY p.patient_ward;
+ORDER BY
+  p.patient_ward;
