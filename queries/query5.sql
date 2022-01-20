@@ -14,9 +14,9 @@ FROM general_practitioner gp
 JOIN patient p ON p.patient_gp = gp.gp_id
 JOIN patient_complaint pc ON p.patient_id = pc.patient_id
 JOIN treatment t ON pc.complaint_id = t.complaint_no
-WHERE gp..gp_name LIKE '%Somers Town Health Centre%' OR gp.gp_name LIKE '%Dickens Gardens Medical Centre%'
+WHERE gp.gp_name LIKE '%Somers Town Health Centre%' OR gp.gp_name LIKE '%Dickens Gardens Medical Centre%'
 AND p.patient_id IS NOT NULL
-GROUP BY g.gp_name
-ORDER BY g.gp_name ASC;
+GROUP BY gp.gp_name
+ORDER BY gp.gp_name ASC;
 
 -- lol its like its a war of coding. gurvir vs char and holly
