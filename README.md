@@ -1,10 +1,3 @@
-# dbprin-demo
+# To Ask
 
-## to do
-
-* match new patient records to
-  * patient-complaint
-  * complaint
-  * treatment
-  * doctor-treatment
-* create 2 (?) more queries
+* About queries fitting all on one page
