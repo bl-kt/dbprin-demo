@@ -64,7 +64,7 @@ ORDER BY patient.patient_lname ASC;
 -- JOIN treatment ON patient_complaint.complaint_id = treatment.complaint_no;
 
 
-SELECT DISTINCT(gp_name), COUNT(treatment_desc) from general_practitioner
+SELECT DISTINCT(gp_name) AS "name of GP surgery", COUNT(treatment_desc) AS "number of surgeries" from general_practitioner
 JOIN patient ON patient.patient_gp = gp_id
 JOIN patient_complaint ON patient.patient_id = patient_complaint.patient_id
 JOIN treatment ON patient_complaint.complaint_id = treatment.complaint_no
