@@ -28,4 +28,5 @@ JOIN patient_complaint pc ON p.patient_id = pc.patient_id
 JOIN complaint c ON c.complaint_id = pc.complaint_id
 JOIN treatment t ON pc.complaint_id = t.complaint_no
 WHERE p.patient_discharged IS NOT NULL
-ORDER BY p.patient_ward;
+ORDER BY p.patient_ward
+LIMIT 10 OFFSET 20;
