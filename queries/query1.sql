@@ -2,8 +2,8 @@
 -- Who?
 
 SELECT p.patient_id AS "Patient ID",
-CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name",
-patient_dob AS "Patient Date of Birth",
+CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Name",
+patient_dob AS "Patient DoB",
 gp_name AS "GP Name",
 complaint_desc AS "Complaint Description",
 treatment_desc AS "Treatment Description",
@@ -15,7 +15,7 @@ JOIN patient_complaint AS pc ON p.patient_id = pc.patient_id
 JOIN complaint AS c ON c.complaint_id = pc.complaint_id
 JOIN treatment AS t ON pc.complaint_id = t.complaint_no
 JOIN doctor_treatment AS dt ON t.treatment_id = dt.treatment_id
-WHERE p.patient_dob < '1962-01-01'
+WHERE p.patient_dob < '2000-01-01'
 ORDER BY t.treatment_start ASC;
 
 -- This query is based off the physical cards that the case study provided us with,
