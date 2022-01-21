@@ -1,13 +1,22 @@
 -- PATIENT CARD
 -- Who?
 
-SELECT CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name",
-patient_dob, gp_name, gp_add1, gp_add2, complaint_desc, treatment_desc, treatment_start, treatment_end from patient
-JOIN general_practitioner ON patient.patient_gp = general_practitioner.gp_id
-JOIN patient_complaint on patient.patient_id = patient_complaint.patient_id
-JOIN complaint ON complaint.complaint_id = patient_complaint.complaint_id
-JOIN treatment on patient_complaint.complaint_id = treatment.complaint_no
-JOIN doctor_treatment on treatment.treatment_id = doctor_treatment.treatment_id;
+SELECT patient_id AS "Patient ID",
+CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name",
+patient_dob AS "Patient Date of Birth",
+gp_name AS "GP Name",
+complaint_desc AS "Complaint Description",
+treatment_desc AS "Treatment Description",
+treatment_start AS "Treatment Start Date",
+treatment_end AS "Treatment End Date"
+FROM patient AS p
+JOIN general_practitioner AS gp ON p.patient_gp = gp.gp_id
+JOIN patient_complaint AS pc ON p.patient_id = pc.patient_id
+JOIN complaint AS c ON c.complaint_id = pc.complaint_id
+JOIN treatment AS t ON pc.complaint_id = t.complaint_no
+JOIN doctor_treatment AS dt ON t.treatment_id = dt.treatment_id
+WHERE p.patient_dob < '1962-01-01'
+ORDER BY t.treatment_start ASC;
 
 -- This query is based off the physical cards that the case study provided us with,
 -- in order to fomuuate our ERD. The business use of the query would be used to display
