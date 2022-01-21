@@ -7,8 +7,8 @@ patient_dob AS "Patient DoB",
 gp_name AS "GP Name",
 complaint_desc AS "Complaint Description",
 treatment_desc AS "Treatment Description",
-treatment_start AS "Treatment Start Date",
-treatment_end AS "Treatment End Date"
+treatment_start AS "Treatment Start",
+treatment_end AS "Treatment End"
 FROM patient AS p
 JOIN general_practitioner AS gp ON p.patient_gp = gp.gp_id
 JOIN patient_complaint AS pc ON p.patient_id = pc.patient_id
