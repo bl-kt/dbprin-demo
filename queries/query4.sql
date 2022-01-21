@@ -2,10 +2,10 @@
 
 -- Business Use
 
--- This returns all the patients that are being treated by a particular doctor. 
--- This would be used for example if a doctor was off sick, their patients could be reallocated 
+-- This returns all the patients that are being treated by a particular doctor.
+-- This would be used for example if a doctor was off sick, their patients could be reallocated
 -- to a different doctor. For this scenario, we are returning information about the patient,
--- which ward they are on, and details of their complaint and current treatment. 
+-- which ward they are on, and details of their complaint and current treatment.
 
 SELECT dt.doctor_id AS "Doctor ID",
 CONCAT(s.staff_fname, ' ', s.staff_lname) AS "Doctor Name",

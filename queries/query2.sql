@@ -2,7 +2,10 @@
 -- Which nurses are currently working in which wards
 -- Which of the nurses are the head nurse of the ward
 
-SELECT DISTINCT ward_name AS "Ward Name", CONCAT(staff_fname, ' ', staff_lname) AS "Nurse", is_head_nurse AS "Head Nurse" FROM patient p
+SELECT DISTINCT ward_name AS "Ward Name",
+CONCAT(staff_fname, ' ', staff_lname) AS "Nurse",
+is_head_nurse AS "Head Nurse"
+FROM patient p
 JOIN ward w ON p.patient_ward = w.ward_id
 JOIN staff_nurse n ON n.nurse_ward = w.ward_id
 JOIN staff s ON s.staff_id = n.nurse_id

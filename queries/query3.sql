@@ -12,17 +12,17 @@
 
 SELECT CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name",
 p.patient_ward AS "Ward",
-DATE_PART('day',c.complaint_date::timestamp - t.treatment_start::timestamp) AS "Complaint Registered to Treatment Start (days)",
-DATE_PART('day', t.treatment_end::timestamp - t.treatment_start::timestamp) AS "Treatment Start to End (days)",
-DATE_PART('day',p.patient_discharged::timestamp - p.patient_admitted::timestamp) AS "Patient Admitted to Patient Discharged (days)",
+DATE_PART('day',c.complaint_date::timestamp - t.treatment_start::timestamp) AS "Waiting Time (days)",
+DATE_PART('day', t.treatment_end::timestamp - t.treatment_start::timestamp) AS "Treatment Length(days)",
+DATE_PART('day',p.patient_discharged::timestamp - p.patient_admitted::timestamp) AS "Hospital Stay (days)",
 ( SELECT ROUND(AVG(stayLength)) FROM (
     SELECT DATE_PART('day', p.patient_discharged::timestamp - p.patient_admitted::timestamp) as stayLength
     FROM patient p ) as calcAvg
-) as "Average Patient Admitted to Patient Discharged (days)",
+) as "Average Hospital Stay",
 ( SELECT ROUND(AVG(stayLength) - DATE_PART('day', p.patient_discharged::timestamp - p.patient_admitted::timestamp)) FROM (
     SELECT DATE_PART('day', p.patient_discharged::timestamp - p.patient_admitted::timestamp) as stayLength
     FROM patient p ) as calcAvg
-) as "Difference from Average (days)"
+) as "Divergence from Average"
 FROM patient p
 JOIN patient_complaint pc ON p.patient_id = pc.patient_id
 JOIN complaint c ON c.complaint_id = pc.complaint_id
