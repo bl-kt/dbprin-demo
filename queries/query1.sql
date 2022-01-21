@@ -1,8 +1,8 @@
 -- PATIENT CARD
 -- Who?
 
-SELECT patient_id AS "Patient ID",
-CONCAT(patient.patient_fname, ' ', patient.patient_lname) AS "Patient Full Name",
+SELECT p.patient_id AS "Patient ID",
+CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name",
 patient_dob AS "Patient Date of Birth",
 gp_name AS "GP Name",
 complaint_desc AS "Complaint Description",
