@@ -10,7 +10,7 @@
 SELECT dt.doctor_id AS "Doctor ID",
 CONCAT(s.staff_fname, ' ', s.staff_lname) AS "Doctor Name",
 p.patient_id AS "Patient ID",
-CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Full Name",
+CONCAT(p.patient_fname, ' ', p.patient_lname) AS "Patient Name",
 p.patient_ward AS "Ward",
 p.patient_comments AS "Comments",
 c.complaint_desc AS "Complaint",
